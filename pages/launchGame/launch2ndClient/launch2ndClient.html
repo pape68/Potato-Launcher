@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Potato Launcher - Launch Game</title>
+
+        <script src="launch2ndClient.js" type="module"></script>
+        <script src="savefltoken.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../../../assets/style/bgImage.css">
+        <link rel="stylesheet" type="text/css" href="../../../assets/style/input.css">
+        <link rel="stylesheet" type="text/css" href="../../../assets/style/index.css">
+
+        <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <img src="../../../assets/img/brightcore.png" id="background" alt="bg">
+        <label>
+            <input type="text" placeholder="fltoken" id="input">
+        </label>
+        <button id="fltoken" onclick="setfltoken()">Set fltoken</button> <br>
+        <label for="accounts"></label>
+        <select id="accounts"></select>
+        <button id="lookup" onclick="launch2ndClient()">Launch Game</button>
+        <p id="output"></p>
+    </body>
+</html>
