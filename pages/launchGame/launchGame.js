@@ -53,11 +53,14 @@ function launchGame(){
             }
         });
 
-        child_process.exec(`start "" "FortniteLauncher.exe"${LaunchCommand} -AUTH_LOGIN=unused -AUTH_PASSWORD=${xch.code} -AUTH_TYPE=exchangecode -epicapp=Fortnite -epicenv=Prod -EpicPortal  -epicusername="${acc.displayName}" -epicuserid='+acc.accountId+' -epiclocale=en`,
+        child_process.exec(`start "" "FortniteLauncher.exe"${LaunchCommand} -AUTH_LOGIN=unused -AUTH_PASSWORD=${xch.code} -AUTH_TYPE=exchangecode -epicapp=Fortnite -epicenv=Prod -EpicPortal  -epicusername="${acc.displayName}" -epicuserid=${acc.accountId} -epiclocale=en`,
             {
                 cwd: path
             }
         );
+
+        clearOutput();
+        outputText(`Launched game on ${acc.displayName} <img src="../../assets/img/ok_hand.png" alt="ok hand" width=4%`)
     });
 }
 
