@@ -46,11 +46,9 @@ function launchGame(){
             return outputText('Error: '+xch.errorMessage);
         }
 
-        fs.readdirSync("C:/ProgramData/Epic/EpicGamesLauncher/Data/Manifests").forEach(item => {
-            if (item.endsWith(".item")) {
-                if (JSON.parse(fs.readFileSync(`C:/ProgramData/Epic/EpicGamesLauncher/Data/Manifests/${item}`).toString()).DisplayName === "Fortnite")
-                    LaunchCommand = (JSON.parse(fs.readFileSync(`C:/ProgramData/Epic/EpicGamesLauncher/Data/Manifests/${item}`).toString()).LaunchCommand);
-            }
+        fs.readdirSync("C:/ProgramData/Epic/EpicGamesLauncher/Data/Manifests").filter(i => i.endsWith('item')).forEach(item => {
+            if (JSON.parse(fs.readFileSync(`C:/ProgramData/Epic/EpicGamesLauncher/Data/Manifests/${item}`).toString()).DisplayName === "Fortnite")
+                LaunchCommand = (JSON.parse(fs.readFileSync(`C:/ProgramData/Epic/EpicGamesLauncher/Data/Manifests/${item}`).toString()).LaunchCommand);
         });
 
         child_process.exec(`start "" "FortniteLauncher.exe"${LaunchCommand} -AUTH_LOGIN=unused -AUTH_PASSWORD=${xch.code} -AUTH_TYPE=exchangecode -epicapp=Fortnite -epicenv=Prod -EpicPortal  -epicusername="${acc.displayName}" -epicuserid=${acc.accountId} -epiclocale=en`,

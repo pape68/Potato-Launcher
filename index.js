@@ -66,6 +66,39 @@ function setPathWindow(){
     pathWindow.removeMenu();
 }
 
+function devLoginWindow(){
+    let loginWindow = new BrowserWindow({
+        width: 350,
+        height: 350,
+        title: 'Device Auth Login',
+        icon: './assets/img/brightcore.png',
+        webPreferences: {
+            contextIsolation: false,
+            enableRemoteModule: true,
+            nodeIntegration: true
+        }
+    });
+    loginWindow.loadURL('file://'+__dirname+'/menu/account/devLogin.html').then();
+    loginWindow.removeMenu();
+}
+
+function xchLoginWindow(){
+    let loginWindow = new BrowserWindow({
+        width: 350,
+        height: 233,
+        title: 'Exchange Code Login',
+        icon: './assets/img/brightcore.png',
+        webPreferences: {
+            contextIsolation: false,
+            enableRemoteModule: true,
+            nodeIntegration: true
+        }
+    });
+    //loginWindow.webContents.openDevTools();
+    loginWindow.loadURL('file://'+__dirname+'/menu/account/xchLogin.html').then();
+    loginWindow.removeMenu();
+}
+
 const menu = [
     {
         label: 'Accounts',
@@ -80,6 +113,18 @@ const menu = [
                 label: 'Convert v1 Accounts',
                 click(){
                     convertAccountsWindow();
+                }
+            },
+            {
+                label: 'Device Auth Login',
+                click(){
+                    devLoginWindow();
+                }
+            },
+            {
+                label: 'Exchange Code Login',
+                click(){
+                    xchLoginWindow();
                 }
             }
         ]

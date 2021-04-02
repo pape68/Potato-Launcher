@@ -1,5 +1,5 @@
 function request(options){
-    return new Promise(resolve => {
+    return new Promise(async resolve => {
         let request = new XMLHttpRequest();
         request.open((options.method || 'GET'), options.url);
 
