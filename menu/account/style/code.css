@@ -1,0 +1,30 @@
+body {
+    background-color: #333333;
+    color: #FFFFFF;
+    font-family: Consolas, serif;
+}
+
+#code {
+    padding-top: 2%;
+    text-align: center;
+}
+
+#code a {
+    color: #FF9933;
+}
+
+#code h5 {
+    font-weight: normal;
+}
+
+#loading {
+    cursor: default;
+    display: block;
+    font-size: 15vw;
+    height: 90%;
+    margin: auto;
+    padding-top: 18%;
+    position: relative;
+    text-align: center;
+    width: 90%;
+}
