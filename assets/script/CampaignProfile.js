@@ -41,7 +41,7 @@ export class CampaignProfile {
             );
             if (campaign.errorMessage) return onFinish(campaign.errorMessage);
             campaign = campaign.profileChanges[0].profile.items;
-            onFinish(campaign);
+            onFinish(campaign, acc);
         });
     }
 }

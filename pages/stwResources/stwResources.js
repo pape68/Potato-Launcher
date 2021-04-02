@@ -12,7 +12,7 @@ function outputText(text){
 
 async function lookupAcc(){
     let input = document.getElementById('input').value;
-    new CampaignProfile(input, profile => {
+    new CampaignProfile(input, (profile, acc) => {
         clearOutput();
         if (typeof profile === 'string') {
             return outputText(profile);
@@ -90,6 +90,7 @@ async function lookupAcc(){
         }
         if (i !== 5) table.appendChild(tr);
 
+        document.getElementById('output').innerHTML += '<h1>'+acc.displayName+'</h1>';
         document.getElementById('output').appendChild(table);
     });
 }
