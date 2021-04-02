@@ -37,3 +37,13 @@ export class VerifiedToken {
         })();
     }
 }
+
+export class VerifiedTokenPromise {
+    constructor(accountId) {
+        return new Promise(resolve => {
+            new VerifiedToken(accountId, token => {
+                resolve(token);
+            });
+        });
+    }
+}
