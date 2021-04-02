@@ -1,0 +1,15 @@
+button, input, select {
+    background-color: #202020;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #696969;
+    color: #FFFFFF;
+    margin: 5px;
+    padding: 10px;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: #606060;
+    cursor: pointer;
+}

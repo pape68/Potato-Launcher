@@ -1,4 +1,9 @@
 body {
     background-color: #333333;
     color: #FFFFFF;
+    font-family: Lato, sans-serif;
+    text-align: center;
+}
+a {
+    color: #FF9933;
 }

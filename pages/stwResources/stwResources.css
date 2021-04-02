@@ -1,0 +1,30 @@
+td {
+    margin: 5px;
+    padding: 4px;
+}
+
+.legendary {
+    background: radial-gradient(#FF9933, #AA4400);
+    outline: 4px solid #DD7716;
+    outline-offset: -4px;
+}
+.epic {
+    background: radial-gradient(#BB55CC, #660077);
+    outline: 4px solid #9933AA;
+    outline-offset: -4px;
+}
+.rare {
+    background: radial-gradient(#0099FF, #0055AA);
+    outline: 4px solid #0077CC;
+    outline-offset: -4px;
+}
+.uncommon {
+    background: radial-gradient(#55FF55, #00AA00);
+    outline: 4px solid #22CC22;
+    outline-offset: -4px;
+}
+.common {
+    background: radial-gradient(#888888, #333333);
+    outline: 4px solid #777777;
+    outline-offset: -4px;
+}

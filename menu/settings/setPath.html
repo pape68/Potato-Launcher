@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Set Path</title>
+
+        <script src="scripts/setPath.js" type="module"></script>
+
+        <link rel="stylesheet" type="text/css" href="../../assets/style/bgImage.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/style/input.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/style/index.css">
+
+        <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <img src="../../assets/img/brightcore.png" id="background" alt="bg">
+        <label>
+            <input type="text" placeholder="Fortnite Path" id="input">
+        </label>
+        <button id="lookup" onclick="setFnPath()">Set Path</button>
+        <h6>Default Path for Fortnite is <a>C:\Program Files\Epic Games\Fortnite\FortniteGame\Binaries\Win64</a></h6>
+        <p id="output"></p>
+    </body>
+</html>

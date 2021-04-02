@@ -1,13 +1,10 @@
-import {axios} from '../../../assets/script/requests.js';
+import { axios, iosBasic, switchBasic } from '../../../assets/script/requests.js';
 
 const electron = require('electron');
 const fs = require('fs');
 
 const loading = document.getElementById('loading');
 const output = document.getElementById('code');
-
-const iosBasic = 'MzQ0NmNkNzI2OTRjNGE0NDg1ZDgxYjc3YWRiYjIxNDE6OTIwOWQ0YTVlMjVhNDU3ZmI5YjA3NDg5ZDMxM2I0MWE=';
-const switchBasic = 'NTIyOWRjZDNhYzM4NDUyMDhiNDk2NjQ5MDkyZjI1MWI6ZTNiZDJkM2UtYmY4Yy00ODU3LTllN2QtZjNkOTQ3ZDIyMGM3=';
 
 (async () => {
     let deviceCodeToken = await axios.post('https://account-public-service-prod.ol.epicgames.com/account/api/oauth/token',
@@ -31,6 +28,8 @@ const switchBasic = 'NTIyOWRjZDNhYzM4NDUyMDhiNDk2NjQ5MDkyZjI1MWI6ZTNiZDJkM2UtYmY
     output.getElementsByTagName('p')[0].innerHTML = deviceCode.user_code;
     loading.style.display = 'none';
     output.style.display = 'block';
+
+    let finished = false;
 
     const interval = setInterval(async () => {
         let checkLoggedIn = await axios.post('https://account-public-service-prod.ol.epicgames.com/account/api/oauth/token',
@@ -61,6 +60,7 @@ const switchBasic = 'NTIyOWRjZDNhYzM4NDUyMDhiNDk2NjQ5MDkyZjI1MWI6ZTNiZDJkM2UtYmY
 
         if (!fs.existsSync(process.env.appdata+'/a.bakedpotato')) fs.mkdirSync(process.env.appdata+'/a.bakedpotato');
         if (!fs.existsSync(process.env.appdata+'/a.bakedpotato/fnappv2')) fs.mkdirSync(process.env.appdata+'/a.bakedpotato/fnappv2');
+        if (!fs.existsSync(process.env.appdata+'/a.bakedpotato/fnappv2/tokens')) fs.mkdirSync(process.env.appdata+'/a.bakedpotato/fnappv2/tokens');
 
         let accountsFile = (fs.existsSync(process.env.appdata+'/a.bakedpotato/fnappv2/accounts.json')) ?
             JSON.parse(fs.readFileSync(process.env.appdata+'/a.bakedpotato/fnappv2/accounts.json').toString())
@@ -106,7 +106,16 @@ const switchBasic = 'NTIyOWRjZDNhYzM4NDUyMDhiNDk2NjQ5MDkyZjI1MWI6ZTNiZDJkM2UtYmY
 
         accountsFile = accountsFile.sort((a, b) => a.displayName.toLowerCase().localeCompare(b.displayName.toLowerCase()));
         fs.writeFileSync(process.env.appdata+'/a.bakedpotato/fnappv2/accounts.json', JSON.stringify(accountsFile, null, '\t'));
+        finished = true;
         clearInterval(interval);
     }, 10000);
-    setTimeout(() => clearInterval(interval), 600000);
+    setTimeout(() => {
+        clearInterval(interval);
+        if (finished) return null;
+        output.getElementsByTagName('h5')[0].innerHTML = 'Please re-open the window to log in.';
+        output.getElementsByTagName('p')[0].innerHTML = 'TIMED OUT';
+
+        loading.style.display = 'none';
+        output.style.display = 'block';
+    }, 600000);
 })();

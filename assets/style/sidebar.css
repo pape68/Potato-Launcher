@@ -1,0 +1,37 @@
+body {
+    background-color: #333333;
+    color: #FFFFFF;
+    font-family: Lato, sans-serif;
+    text-align: center;
+    user-select: none;
+}
+
+#left {
+    background-color: #222222;
+    float: left;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    width: 33%;
+}
+
+#left a {
+    color: #FF9933;
+    display: block;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+#left a#selected {
+    color: #FFFFFF;
+    cursor: default;
+    text-decoration: none;
+}
+
+#right {
+    margin-left: 33%;
+    padding-left: 10px;
+}
