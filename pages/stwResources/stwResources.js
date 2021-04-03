@@ -16,7 +16,7 @@ async function lookupAcc(){
         clearOutput();
         if (typeof profile === 'string') return outputText(profile);
 
-        const templateIds = JSON.parse(fs.readFileSync('./assets/json/templateIds.json').toString());
+        const templateIds = JSON.parse(fs.readFileSync(__dirname+'/../../assets/json/templateIds.json').toString());
 
         const sr = ['AccountResource:reagent_evolverarity_sr', 'AccountResource:reagent_alteration_upgrade_sr', 'AccountResource:reagent_alteration_gameplay_generic',
                     'AccountResource:voucher_herobuyback', 'AccountResource:voucher_item_buyback', 'AccountResource:reagent_promotion_heroes',

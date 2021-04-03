@@ -11,7 +11,7 @@ app.on('ready', () => {
             nodeIntegration: true
         }
     });
-    //window.webContents.openDevTools();
+    window.webContents.openDevTools();
     window.loadURL('file://'+__dirname+'/index.html').then();
 
     const mainMenu = Menu.buildFromTemplate(menu);
