@@ -1,0 +1,25 @@
+tr td:nth-child(1) {
+    text-align: right;
+}
+
+tr td:nth-child(2) {
+    text-align: left;
+}
+
+table {
+    left: 67%;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+td {
+    flex-wrap: wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+td img {
+    horiz-align: left;
+    position: absolute;
+    transform: translateX(-100%);
+}

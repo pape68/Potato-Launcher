@@ -14,9 +14,7 @@ async function lookupAcc(){
     let input = document.getElementById('input').value;
     new CampaignProfile(input, (profile, acc) => {
         clearOutput();
-        if (typeof profile === 'string') {
-            return outputText(profile);
-        }
+        if (typeof profile === 'string') return outputText(profile);
 
         const templateIds = JSON.parse(fs.readFileSync('./assets/json/templateIds.json').toString());
 
