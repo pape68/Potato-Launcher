@@ -119,3 +119,9 @@ const output = document.getElementById('code');
         output.style.display = 'block';
     }, 600000);
 })();
+
+function openBrowser(){
+    electron.shell.openExternal('https://www.epicgames.com/activate');
+}
+
+window.openBrowser = openBrowser;

@@ -1,11 +1,6 @@
 import { axios } from './requests.js';
 import { VerifiedToken } from "./VerifiedToken.js";
 
-const fs = require('fs');
-const accounts = fs.existsSync(process.env.appdata+'/a.bakedpotato/fnappv2/accounts.json') ?
-    JSON.parse(fs.readFileSync(process.env.appdata+'/a.bakedpotato/fnappv2/accounts.json').toString()) :
-    [];
-
 export class ExtendedCampaignProfile {
     constructor(accountId, onFinish) {
         new VerifiedToken(null, async token => {
@@ -57,8 +52,8 @@ export class ExtendedCampaignProfile {
 
 export class CampaignProfile {
     constructor(accountId, onFinish){
-        new ExtendedCampaignProfile(accountId,  profile => {
-            onFinish(profile.items);
+        new ExtendedCampaignProfile(accountId,  (profile, acc) => {
+            onFinish(profile.items, acc);
         });
     }
 }
