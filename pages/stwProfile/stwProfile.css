@@ -18,8 +18,13 @@ td {
     word-wrap: break-word;
 }
 
-td img {
+td img:not(.col2) {
     horiz-align: left;
+    padding-right: 5px;
     position: absolute;
     transform: translateX(-100%);
+}
+
+h1 {
+    padding-bottom: 0;
 }
