@@ -11,6 +11,8 @@ function outputText(text){
 }
 
 async function lookupAcc(){
+    clearOutput();
+    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="4%">');
     let input = document.getElementById('input').value;
     new CampaignProfile(input, (profile, acc) => {
         clearOutput();
@@ -27,9 +29,9 @@ async function lookupAcc(){
         const r  = ['AccountResource:eventcurrency_scaling', 'AccountResource:eventcurrency_lunar', 'AccountResource:reagent_evolverarity_r',
                     'AccountResource:reagent_alteration_upgrade_r', 'AccountResource:eventcurrency_summer'];
         const uc = ['AccountResource:reagent_alteration_upgrade_uc'];
-        const c  = ['AccountResource:reagent_alteration_ele_nature', 'AccountResource:reagent_alteration_ele_fire', 'AccountResource:reagent_alteration_ele_water',
+        /*const c  = ['AccountResource:reagent_alteration_ele_nature', 'AccountResource:reagent_alteration_ele_fire', 'AccountResource:reagent_alteration_ele_water',
                     'AccountResource:heroxp', 'AccountResource:reagent_alteration_generic', 'AccountResource:schematicxp', 'AccountResource:personnelxp',
-                    'AccountResource:reagent_people', 'AccountResource:reagent_traps', 'AccountResource:phoenixxp', 'AccountResource:reagent_weapons'];
+                    'AccountResource:reagent_people', 'AccountResource:reagent_traps', 'AccountResource:phoenixxp', 'AccountResource:reagent_weapons'];*/
 
         let keys = Object.keys(profile)
             .filter(itemId => profile[itemId].templateId.startsWith('AccountResource:'))
@@ -77,14 +79,6 @@ async function lookupAcc(){
                 table.appendChild(tr);
                 tr = document.createElement('tr');
             }
-
-            /*outputText(
-                '<div class="'+rarity+'">'
-                + '<img src="../../assets/img/resources/'+templateIds[value.templateId].toLowerCase().replace(/\W/g, '')+'.png" alt="'+templateIds[value.templateId]+'">'
-                + '<p>'+templateIds[value.templateId]+'</p>'
-                + '<p class="quantity">'+value.quantity.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')+'</p>'
-                + '</div>'
-            );*/
         }
         if (i !== 5) table.appendChild(tr);
 

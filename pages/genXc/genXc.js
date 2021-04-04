@@ -24,8 +24,8 @@ function outputText(text) {
 
 function genXc() {
     let input = document.getElementById('accounts').value;
-    clearOutput();
     let acc = accounts.filter(acc => acc.accountId === input)[0];
+    clearOutput();
     outputText('Generating exchange on ' + acc.displayName + ' <img src="../../assets/img/loading.gif" alt="loading" width="4%">');
 
     new VerifiedToken(input, async token => {

@@ -14,11 +14,15 @@ function outputText(text){
 }
 
 async function lookupAcc(){
+    clearOutput();
+    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="4%">');
     new VerifiedToken(null, async token => {
         let input = document.getElementById('input').value;
 
-        clearOutput();
-        if (token.length !== 32) return outputText('Error: '+token);
+        if (token.length !== 32){
+            clearOutput();
+            return outputText('Error: '+token);
+        }
 
         if (input.length !== 32){
             let lookup = await axios.get('https://account-public-service-prod.ol.epicgames.com/account/api/public/account/displayName/'+input,
@@ -27,7 +31,10 @@ async function lookupAcc(){
                     'Content-Type': 'application/json'
                 }
             );
-            if (!lookup.id) return outputText(lookup.errorMessage);
+            if (!lookup.id){
+                clearOutput();
+                return outputText(lookup.errorMessage);
+            }
             input = lookup.id;
         }
 
@@ -44,6 +51,7 @@ async function lookupAcc(){
             }
         );
 
+        clearOutput();
         if (!acc[0]) return outputText(acc.errorMessage);
         acc = acc[0];
 

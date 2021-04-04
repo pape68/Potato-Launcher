@@ -12,6 +12,8 @@ function outputText(text){
 }
 
 async function lookupAcc(){
+    clearOutput();
+    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="4%">');
     let input = document.getElementById('input').value;
     new ExtendedCampaignProfile(input, (profile, acc) => {
         clearOutput();
