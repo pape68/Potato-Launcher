@@ -66,6 +66,22 @@ function setPathWindow(){
     pathWindow.removeMenu();
 }
 
+function creditsWindow(){
+    let credWindow = new BrowserWindow({
+        width: 350,
+        height: 350,
+        title: 'Potato Launcher Credits',
+        icon: './assets/img/brightcore.png',
+        webPreferences: {
+            contextIsolation: false,
+            enableRemoteModule: true,
+            nodeIntegration: true
+        }
+    });
+    credWindow.loadURL('file://'+__dirname+'/menu/credits/index.html').then();
+    credWindow.removeMenu();
+}
+
 function devLoginWindow(){
     let loginWindow = new BrowserWindow({
         width: 350,
@@ -128,6 +144,12 @@ const menu = [
                 }
             }
         ]
+    },
+    {
+        label: 'Credits',
+        click(){
+            creditsWindow();
+        }
     },
     {
         label: 'Settings',
