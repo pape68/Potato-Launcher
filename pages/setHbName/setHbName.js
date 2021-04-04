@@ -20,12 +20,12 @@ function outputText(text) {
     document.getElementById('output').innerHTML += text + '<br>';
 }
 
-async function hbName() {
+async function setHbName() {
     clearOutput();
     outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="4%">');
     let input = document.getElementById('accounts').value;
     let acc = accounts.filter(acc => acc.accountId === input)[0];
-    let hbName = document.getElementById('hbName').value;
+    let hbName = document.getElementById('setHbName').value;
     let profile = await api.SetHomebaseName(acc.accountId, hbName);
     if (profile.errorMessage){
         clearOutput();
@@ -37,4 +37,4 @@ async function hbName() {
     outputText('Homebase name changed to '+newHbName);
 }
 
-window.hbName = hbName;
+window.setHbName = setHbName;

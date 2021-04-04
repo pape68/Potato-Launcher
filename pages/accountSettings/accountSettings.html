@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Potato Launcher - Set Homebase Name</title>
+        <title>Potato Launcher - Account Settings</title>
 
-        <script src="hbName.js" type="module"></script>
+        <script src="accountSettings.js" type="module"></script>
         <script src="../../assets/script/sidebar.js"></script>
 
         <link rel="stylesheet" type="text/css" href="../../assets/style/bgImage.css">
@@ -14,8 +14,7 @@
     <body>
         <img src="../../assets/img/brightcore.png" id="background" alt="bg">
         <label for="accounts"></label><select id="accounts"></select>
-        <label for="hbName"></label><input placeholder="Homebase Name" type="text" id="hbName">
-        <button id="lookup" onclick="hbName()">Set Homebase Name</button>
-        <p id="output"></p>
+        <button id="lookup" onclick="accountSettings()">Open Account Settings</button>
+        <p id="output" style="user-select: text !important;"></p>
     </body>
 </html>
