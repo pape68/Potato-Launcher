@@ -1,4 +1,5 @@
 import { api } from '../../assets/script/api.js';
+import { formatNum } from '../../assets/script/util.js';
 
 const fs = require('fs');
 
@@ -20,20 +21,25 @@ function outputText(text) {
     document.getElementById('output').innerHTML += text + '<br>';
 }
 
-async function setHbName() {
+async function collectDaily() {
     clearOutput();
     outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="4%">');
+    const templateIds = JSON.parse(fs.readFileSync(__dirname+'/../../assets/json/templateIds.json').toString());
     let input = document.getElementById('accounts').value;
     let acc = accounts.filter(acc => acc.accountId === input)[0];
-    let hbName = document.getElementById('setHbName').value;
-    let profile = await api.SetHomebaseName(acc.accountId, hbName);
-    if (profile.errorMessage){
+    let login = await api.ClaimLoginReward(acc.accountId);
+    if (login.errorMessage){
         clearOutput();
-        return outputText(profile.errorMessage);
+        return outputText(login.errorMessage);
     }
-    let newHbName = profile.profileChanges[0].profile.stats.attributes.homebase_name;
+    let days = login.notifications[0].daysLoggedIn;
+    if (!login.notifications[0].items[0]) {
+        clearOutput();
+        return outputText('Already collected reward for day '+formatNum(days)+'.');
+    }
+    let item = login.notifications[0].items[0];
     clearOutput();
-    outputText('Homebase name changed to '+newHbName);
+    outputText('<b>Day '+formatNum(days)+':</b> Collected '+item.quantity+'x '+(templateIds[item.itemType] || item.itemType));
 }
 
-window.setHbName = setHbName;
+window.collectDaily = collectDaily;

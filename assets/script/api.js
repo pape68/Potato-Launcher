@@ -17,5 +17,6 @@ function composeMcp(accountId, endpoint, profile, payload){
 }
 
 export const api = {
+    ClaimLoginReward: (accountId) => { return composeMcp(accountId, 'ClaimLoginReward', 'campaign') },
     SetHomebaseName: (accountId, homebaseName) => { return composeMcp(accountId, 'SetHomebaseName', 'common_public', '{"homebaseName":"'+homebaseName+'"}') }
 }
