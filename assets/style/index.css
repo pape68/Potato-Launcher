@@ -7,3 +7,7 @@ body {
 a {
     color: #FF9933;
 }
+ul {
+    list-style: none inside none;
+    padding-left: 0;
+}

@@ -17,5 +17,5 @@ function composeMcp(accountId, endpoint, profile, payload){
 }
 
 export const api = {
-    SetHomebaseName: (accountId, homebaseName) => {return composeMcp(accountId, 'SetHomebaseName', 'common_public', '{"homebaseName":"'+homebaseName+'"}')}
+    SetHomebaseName: (accountId, homebaseName) => { return composeMcp(accountId, 'SetHomebaseName', 'common_public', '{"homebaseName":"'+homebaseName+'"}') }
 }
