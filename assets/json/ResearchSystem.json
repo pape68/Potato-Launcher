@@ -1,0 +1,2471 @@
+[
+  {
+    "ExportType": "CurveTable",
+    "ExportValue": {
+      "fortitude_cost": {
+        "InterpMode": "ERichCurveInterpMode::RCIM_Linear",
+        "Keys": [
+          {
+            "KeyTime": 0.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 1.0,
+            "KeyValue": 300.0
+          },
+          {
+            "KeyTime": 10.0,
+            "KeyValue": 300.0
+          },
+          {
+            "KeyTime": 11.0,
+            "KeyValue": 600.0
+          },
+          {
+            "KeyTime": 20.0,
+            "KeyValue": 600.0
+          },
+          {
+            "KeyTime": 21.0,
+            "KeyValue": 900.0
+          },
+          {
+            "KeyTime": 30.0,
+            "KeyValue": 900.0
+          },
+          {
+            "KeyTime": 31.0,
+            "KeyValue": 1200.0
+          },
+          {
+            "KeyTime": 40.0,
+            "KeyValue": 1200.0
+          },
+          {
+            "KeyTime": 41.0,
+            "KeyValue": 1500.0
+          },
+          {
+            "KeyTime": 50.0,
+            "KeyValue": 1500.0
+          },
+          {
+            "KeyTime": 51.0,
+            "KeyValue": 1800.0
+          },
+          {
+            "KeyTime": 60.0,
+            "KeyValue": 1800.0
+          },
+          {
+            "KeyTime": 61.0,
+            "KeyValue": 2400.0
+          },
+          {
+            "KeyTime": 70.0,
+            "KeyValue": 2400.0
+          },
+          {
+            "KeyTime": 71.0,
+            "KeyValue": 3000.0
+          },
+          {
+            "KeyTime": 80.0,
+            "KeyValue": 3000.0
+          },
+          {
+            "KeyTime": 81.0,
+            "KeyValue": 3600.0
+          },
+          {
+            "KeyTime": 90.0,
+            "KeyValue": 3600.0
+          },
+          {
+            "KeyTime": 91.0,
+            "KeyValue": 4200.0
+          },
+          {
+            "KeyTime": 120.0,
+            "KeyValue": 4200.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+        "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+      },
+      "fortitude_personal": {
+        "InterpMode": "ERichCurveInterpMode::RCIM_Linear",
+        "Keys": [
+          {
+            "KeyTime": 0.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 1.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 9.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 10.0,
+            "KeyValue": 2.0
+          },
+          {
+            "KeyTime": 11.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 19.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 20.0,
+            "KeyValue": 4.0
+          },
+          {
+            "KeyTime": 21.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 29.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 30.0,
+            "KeyValue": 8.0
+          },
+          {
+            "KeyTime": 31.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 39.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 40.0,
+            "KeyValue": 14.0
+          },
+          {
+            "KeyTime": 41.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 49.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 50.0,
+            "KeyValue": 20.0
+          },
+          {
+            "KeyTime": 51.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 59.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 60.0,
+            "KeyValue": 24.0
+          },
+          {
+            "KeyTime": 61.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 69.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 70.0,
+            "KeyValue": 28.0
+          },
+          {
+            "KeyTime": 71.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 79.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 80.0,
+            "KeyValue": 32.0
+          },
+          {
+            "KeyTime": 81.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 89.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 90.0,
+            "KeyValue": 36.0
+          },
+          {
+            "KeyTime": 91.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 99.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 100.0,
+            "KeyValue": 38.0
+          },
+          {
+            "KeyTime": 101.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 109.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 110.0,
+            "KeyValue": 42.0
+          },
+          {
+            "KeyTime": 111.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 119.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 120.0,
+            "KeyValue": 44.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+        "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+      },
+      "fortitude_personal_cumulative": {
+        "InterpMode": "ERichCurveInterpMode::RCIM_Linear",
+        "Keys": [
+          {
+            "KeyTime": 0.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 9.0,
+            "KeyValue": 9.0
+          },
+          {
+            "KeyTime": 10.0,
+            "KeyValue": 11.0
+          },
+          {
+            "KeyTime": 19.0,
+            "KeyValue": 20.0
+          },
+          {
+            "KeyTime": 20.0,
+            "KeyValue": 24.0
+          },
+          {
+            "KeyTime": 29.0,
+            "KeyValue": 33.0
+          },
+          {
+            "KeyTime": 30.0,
+            "KeyValue": 41.0
+          },
+          {
+            "KeyTime": 39.0,
+            "KeyValue": 50.0
+          },
+          {
+            "KeyTime": 40.0,
+            "KeyValue": 64.0
+          },
+          {
+            "KeyTime": 49.0,
+            "KeyValue": 73.0
+          },
+          {
+            "KeyTime": 50.0,
+            "KeyValue": 93.0
+          },
+          {
+            "KeyTime": 59.0,
+            "KeyValue": 102.0
+          },
+          {
+            "KeyTime": 60.0,
+            "KeyValue": 126.0
+          },
+          {
+            "KeyTime": 69.0,
+            "KeyValue": 135.0
+          },
+          {
+            "KeyTime": 70.0,
+            "KeyValue": 163.0
+          },
+          {
+            "KeyTime": 79.0,
+            "KeyValue": 172.0
+          },
+          {
+            "KeyTime": 80.0,
+            "KeyValue": 204.0
+          },
+          {
+            "KeyTime": 89.0,
+            "KeyValue": 213.0
+          },
+          {
+            "KeyTime": 90.0,
+            "KeyValue": 249.0
+          },
+          {
+            "KeyTime": 99.0,
+            "KeyValue": 258.0
+          },
+          {
+            "KeyTime": 100.0,
+            "KeyValue": 296.0
+          },
+          {
+            "KeyTime": 109.0,
+            "KeyValue": 305.0
+          },
+          {
+            "KeyTime": 110.0,
+            "KeyValue": 347.0
+          },
+          {
+            "KeyTime": 119.0,
+            "KeyValue": 356.0
+          },
+          {
+            "KeyTime": 120.0,
+            "KeyValue": 400.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+        "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+      },
+      "fortitude_team": {
+        "InterpMode": "ERichCurveInterpMode::RCIM_Linear",
+        "Keys": [
+          {
+            "KeyTime": 0.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 9.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 10.0,
+            "KeyValue": 6.0
+          },
+          {
+            "KeyTime": 11.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 19.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 20.0,
+            "KeyValue": 8.0
+          },
+          {
+            "KeyTime": 21.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 29.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 30.0,
+            "KeyValue": 10.0
+          },
+          {
+            "KeyTime": 31.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 39.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 40.0,
+            "KeyValue": 12.0
+          },
+          {
+            "KeyTime": 41.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 49.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 50.0,
+            "KeyValue": 14.0
+          },
+          {
+            "KeyTime": 51.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 59.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 60.0,
+            "KeyValue": 16.0
+          },
+          {
+            "KeyTime": 61.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 69.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 70.0,
+            "KeyValue": 18.0
+          },
+          {
+            "KeyTime": 71.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 79.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 80.0,
+            "KeyValue": 20.0
+          },
+          {
+            "KeyTime": 81.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 89.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 90.0,
+            "KeyValue": 22.0
+          },
+          {
+            "KeyTime": 91.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 99.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 100.0,
+            "KeyValue": 24.0
+          },
+          {
+            "KeyTime": 101.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 109.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 110.0,
+            "KeyValue": 24.0
+          },
+          {
+            "KeyTime": 111.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 119.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 120.0,
+            "KeyValue": 26.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+        "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+      },
+      "fortitude_team_cumulative": {
+        "InterpMode": "ERichCurveInterpMode::RCIM_Linear",
+        "Keys": [
+          {
+            "KeyTime": 0.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 9.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 10.0,
+            "KeyValue": 6.0
+          },
+          {
+            "KeyTime": 19.0,
+            "KeyValue": 6.0
+          },
+          {
+            "KeyTime": 20.0,
+            "KeyValue": 14.0
+          },
+          {
+            "KeyTime": 29.0,
+            "KeyValue": 14.0
+          },
+          {
+            "KeyTime": 30.0,
+            "KeyValue": 24.0
+          },
+          {
+            "KeyTime": 39.0,
+            "KeyValue": 24.0
+          },
+          {
+            "KeyTime": 40.0,
+            "KeyValue": 36.0
+          },
+          {
+            "KeyTime": 49.0,
+            "KeyValue": 36.0
+          },
+          {
+            "KeyTime": 50.0,
+            "KeyValue": 50.0
+          },
+          {
+            "KeyTime": 59.0,
+            "KeyValue": 50.0
+          },
+          {
+            "KeyTime": 60.0,
+            "KeyValue": 66.0
+          },
+          {
+            "KeyTime": 69.0,
+            "KeyValue": 66.0
+          },
+          {
+            "KeyTime": 70.0,
+            "KeyValue": 84.0
+          },
+          {
+            "KeyTime": 79.0,
+            "KeyValue": 84.0
+          },
+          {
+            "KeyTime": 80.0,
+            "KeyValue": 104.0
+          },
+          {
+            "KeyTime": 89.0,
+            "KeyValue": 104.0
+          },
+          {
+            "KeyTime": 90.0,
+            "KeyValue": 126.0
+          },
+          {
+            "KeyTime": 99.0,
+            "KeyValue": 126.0
+          },
+          {
+            "KeyTime": 100.0,
+            "KeyValue": 150.0
+          },
+          {
+            "KeyTime": 109.0,
+            "KeyValue": 150.0
+          },
+          {
+            "KeyTime": 110.0,
+            "KeyValue": 174.0
+          },
+          {
+            "KeyTime": 119.0,
+            "KeyValue": 174.0
+          },
+          {
+            "KeyTime": 120.0,
+            "KeyValue": 200.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+        "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+      },
+      "offense_cost": {
+        "InterpMode": "ERichCurveInterpMode::RCIM_Linear",
+        "Keys": [
+          {
+            "KeyTime": 0.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 1.0,
+            "KeyValue": 300.0
+          },
+          {
+            "KeyTime": 10.0,
+            "KeyValue": 300.0
+          },
+          {
+            "KeyTime": 11.0,
+            "KeyValue": 600.0
+          },
+          {
+            "KeyTime": 20.0,
+            "KeyValue": 600.0
+          },
+          {
+            "KeyTime": 21.0,
+            "KeyValue": 900.0
+          },
+          {
+            "KeyTime": 30.0,
+            "KeyValue": 900.0
+          },
+          {
+            "KeyTime": 31.0,
+            "KeyValue": 1200.0
+          },
+          {
+            "KeyTime": 40.0,
+            "KeyValue": 1200.0
+          },
+          {
+            "KeyTime": 41.0,
+            "KeyValue": 1500.0
+          },
+          {
+            "KeyTime": 50.0,
+            "KeyValue": 1500.0
+          },
+          {
+            "KeyTime": 51.0,
+            "KeyValue": 1800.0
+          },
+          {
+            "KeyTime": 60.0,
+            "KeyValue": 1800.0
+          },
+          {
+            "KeyTime": 61.0,
+            "KeyValue": 2400.0
+          },
+          {
+            "KeyTime": 70.0,
+            "KeyValue": 2400.0
+          },
+          {
+            "KeyTime": 71.0,
+            "KeyValue": 3000.0
+          },
+          {
+            "KeyTime": 80.0,
+            "KeyValue": 3000.0
+          },
+          {
+            "KeyTime": 81.0,
+            "KeyValue": 3600.0
+          },
+          {
+            "KeyTime": 90.0,
+            "KeyValue": 3600.0
+          },
+          {
+            "KeyTime": 91.0,
+            "KeyValue": 4200.0
+          },
+          {
+            "KeyTime": 120.0,
+            "KeyValue": 4200.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+        "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+      },
+      "offense_personal": {
+        "InterpMode": "ERichCurveInterpMode::RCIM_Linear",
+        "Keys": [
+          {
+            "KeyTime": 0.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 1.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 9.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 10.0,
+            "KeyValue": 2.0
+          },
+          {
+            "KeyTime": 11.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 19.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 20.0,
+            "KeyValue": 4.0
+          },
+          {
+            "KeyTime": 21.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 29.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 30.0,
+            "KeyValue": 8.0
+          },
+          {
+            "KeyTime": 31.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 39.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 40.0,
+            "KeyValue": 14.0
+          },
+          {
+            "KeyTime": 41.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 49.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 50.0,
+            "KeyValue": 20.0
+          },
+          {
+            "KeyTime": 51.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 59.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 60.0,
+            "KeyValue": 24.0
+          },
+          {
+            "KeyTime": 61.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 69.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 70.0,
+            "KeyValue": 28.0
+          },
+          {
+            "KeyTime": 71.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 79.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 80.0,
+            "KeyValue": 32.0
+          },
+          {
+            "KeyTime": 81.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 89.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 90.0,
+            "KeyValue": 36.0
+          },
+          {
+            "KeyTime": 91.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 99.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 100.0,
+            "KeyValue": 38.0
+          },
+          {
+            "KeyTime": 101.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 109.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 110.0,
+            "KeyValue": 42.0
+          },
+          {
+            "KeyTime": 111.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 119.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 120.0,
+            "KeyValue": 44.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+        "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+      },
+      "offense_personal_cumulative": {
+        "InterpMode": "ERichCurveInterpMode::RCIM_Linear",
+        "Keys": [
+          {
+            "KeyTime": 0.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 9.0,
+            "KeyValue": 9.0
+          },
+          {
+            "KeyTime": 10.0,
+            "KeyValue": 11.0
+          },
+          {
+            "KeyTime": 19.0,
+            "KeyValue": 20.0
+          },
+          {
+            "KeyTime": 20.0,
+            "KeyValue": 24.0
+          },
+          {
+            "KeyTime": 29.0,
+            "KeyValue": 33.0
+          },
+          {
+            "KeyTime": 30.0,
+            "KeyValue": 41.0
+          },
+          {
+            "KeyTime": 39.0,
+            "KeyValue": 50.0
+          },
+          {
+            "KeyTime": 40.0,
+            "KeyValue": 64.0
+          },
+          {
+            "KeyTime": 49.0,
+            "KeyValue": 73.0
+          },
+          {
+            "KeyTime": 50.0,
+            "KeyValue": 93.0
+          },
+          {
+            "KeyTime": 59.0,
+            "KeyValue": 102.0
+          },
+          {
+            "KeyTime": 60.0,
+            "KeyValue": 126.0
+          },
+          {
+            "KeyTime": 69.0,
+            "KeyValue": 135.0
+          },
+          {
+            "KeyTime": 70.0,
+            "KeyValue": 163.0
+          },
+          {
+            "KeyTime": 79.0,
+            "KeyValue": 172.0
+          },
+          {
+            "KeyTime": 80.0,
+            "KeyValue": 204.0
+          },
+          {
+            "KeyTime": 89.0,
+            "KeyValue": 213.0
+          },
+          {
+            "KeyTime": 90.0,
+            "KeyValue": 249.0
+          },
+          {
+            "KeyTime": 99.0,
+            "KeyValue": 258.0
+          },
+          {
+            "KeyTime": 100.0,
+            "KeyValue": 296.0
+          },
+          {
+            "KeyTime": 109.0,
+            "KeyValue": 305.0
+          },
+          {
+            "KeyTime": 110.0,
+            "KeyValue": 347.0
+          },
+          {
+            "KeyTime": 119.0,
+            "KeyValue": 356.0
+          },
+          {
+            "KeyTime": 120.0,
+            "KeyValue": 400.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+        "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+      },
+      "offense_team": {
+        "InterpMode": "ERichCurveInterpMode::RCIM_Linear",
+        "Keys": [
+          {
+            "KeyTime": 0.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 9.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 10.0,
+            "KeyValue": 6.0
+          },
+          {
+            "KeyTime": 11.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 19.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 20.0,
+            "KeyValue": 8.0
+          },
+          {
+            "KeyTime": 21.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 29.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 30.0,
+            "KeyValue": 10.0
+          },
+          {
+            "KeyTime": 31.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 39.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 40.0,
+            "KeyValue": 12.0
+          },
+          {
+            "KeyTime": 41.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 49.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 50.0,
+            "KeyValue": 14.0
+          },
+          {
+            "KeyTime": 51.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 59.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 60.0,
+            "KeyValue": 16.0
+          },
+          {
+            "KeyTime": 61.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 69.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 70.0,
+            "KeyValue": 18.0
+          },
+          {
+            "KeyTime": 71.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 79.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 80.0,
+            "KeyValue": 20.0
+          },
+          {
+            "KeyTime": 81.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 89.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 90.0,
+            "KeyValue": 22.0
+          },
+          {
+            "KeyTime": 91.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 99.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 100.0,
+            "KeyValue": 24.0
+          },
+          {
+            "KeyTime": 101.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 109.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 110.0,
+            "KeyValue": 24.0
+          },
+          {
+            "KeyTime": 111.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 119.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 120.0,
+            "KeyValue": 26.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+        "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+      },
+      "offense_team_cumulative": {
+        "InterpMode": "ERichCurveInterpMode::RCIM_Linear",
+        "Keys": [
+          {
+            "KeyTime": 0.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 9.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 10.0,
+            "KeyValue": 6.0
+          },
+          {
+            "KeyTime": 19.0,
+            "KeyValue": 6.0
+          },
+          {
+            "KeyTime": 20.0,
+            "KeyValue": 14.0
+          },
+          {
+            "KeyTime": 29.0,
+            "KeyValue": 14.0
+          },
+          {
+            "KeyTime": 30.0,
+            "KeyValue": 24.0
+          },
+          {
+            "KeyTime": 39.0,
+            "KeyValue": 24.0
+          },
+          {
+            "KeyTime": 40.0,
+            "KeyValue": 36.0
+          },
+          {
+            "KeyTime": 49.0,
+            "KeyValue": 36.0
+          },
+          {
+            "KeyTime": 50.0,
+            "KeyValue": 50.0
+          },
+          {
+            "KeyTime": 59.0,
+            "KeyValue": 50.0
+          },
+          {
+            "KeyTime": 60.0,
+            "KeyValue": 66.0
+          },
+          {
+            "KeyTime": 69.0,
+            "KeyValue": 66.0
+          },
+          {
+            "KeyTime": 70.0,
+            "KeyValue": 84.0
+          },
+          {
+            "KeyTime": 79.0,
+            "KeyValue": 84.0
+          },
+          {
+            "KeyTime": 80.0,
+            "KeyValue": 104.0
+          },
+          {
+            "KeyTime": 89.0,
+            "KeyValue": 104.0
+          },
+          {
+            "KeyTime": 90.0,
+            "KeyValue": 126.0
+          },
+          {
+            "KeyTime": 99.0,
+            "KeyValue": 126.0
+          },
+          {
+            "KeyTime": 100.0,
+            "KeyValue": 150.0
+          },
+          {
+            "KeyTime": 109.0,
+            "KeyValue": 150.0
+          },
+          {
+            "KeyTime": 110.0,
+            "KeyValue": 174.0
+          },
+          {
+            "KeyTime": 119.0,
+            "KeyValue": 174.0
+          },
+          {
+            "KeyTime": 120.0,
+            "KeyValue": 200.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+        "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+      },
+      "resistance_cost": {
+        "InterpMode": "ERichCurveInterpMode::RCIM_Linear",
+        "Keys": [
+          {
+            "KeyTime": 0.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 1.0,
+            "KeyValue": 300.0
+          },
+          {
+            "KeyTime": 10.0,
+            "KeyValue": 300.0
+          },
+          {
+            "KeyTime": 11.0,
+            "KeyValue": 600.0
+          },
+          {
+            "KeyTime": 20.0,
+            "KeyValue": 600.0
+          },
+          {
+            "KeyTime": 21.0,
+            "KeyValue": 900.0
+          },
+          {
+            "KeyTime": 30.0,
+            "KeyValue": 900.0
+          },
+          {
+            "KeyTime": 31.0,
+            "KeyValue": 1200.0
+          },
+          {
+            "KeyTime": 40.0,
+            "KeyValue": 1200.0
+          },
+          {
+            "KeyTime": 41.0,
+            "KeyValue": 1500.0
+          },
+          {
+            "KeyTime": 50.0,
+            "KeyValue": 1500.0
+          },
+          {
+            "KeyTime": 51.0,
+            "KeyValue": 1800.0
+          },
+          {
+            "KeyTime": 60.0,
+            "KeyValue": 1800.0
+          },
+          {
+            "KeyTime": 61.0,
+            "KeyValue": 2400.0
+          },
+          {
+            "KeyTime": 70.0,
+            "KeyValue": 2400.0
+          },
+          {
+            "KeyTime": 71.0,
+            "KeyValue": 3000.0
+          },
+          {
+            "KeyTime": 80.0,
+            "KeyValue": 3000.0
+          },
+          {
+            "KeyTime": 81.0,
+            "KeyValue": 3600.0
+          },
+          {
+            "KeyTime": 90.0,
+            "KeyValue": 3600.0
+          },
+          {
+            "KeyTime": 91.0,
+            "KeyValue": 4200.0
+          },
+          {
+            "KeyTime": 120.0,
+            "KeyValue": 4200.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+        "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+      },
+      "resistance_personal": {
+        "InterpMode": "ERichCurveInterpMode::RCIM_Linear",
+        "Keys": [
+          {
+            "KeyTime": 0.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 1.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 9.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 10.0,
+            "KeyValue": 2.0
+          },
+          {
+            "KeyTime": 11.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 19.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 20.0,
+            "KeyValue": 4.0
+          },
+          {
+            "KeyTime": 21.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 29.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 30.0,
+            "KeyValue": 8.0
+          },
+          {
+            "KeyTime": 31.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 39.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 40.0,
+            "KeyValue": 14.0
+          },
+          {
+            "KeyTime": 41.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 49.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 50.0,
+            "KeyValue": 20.0
+          },
+          {
+            "KeyTime": 51.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 59.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 60.0,
+            "KeyValue": 24.0
+          },
+          {
+            "KeyTime": 61.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 69.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 70.0,
+            "KeyValue": 28.0
+          },
+          {
+            "KeyTime": 71.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 79.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 80.0,
+            "KeyValue": 32.0
+          },
+          {
+            "KeyTime": 81.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 89.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 90.0,
+            "KeyValue": 36.0
+          },
+          {
+            "KeyTime": 91.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 99.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 100.0,
+            "KeyValue": 38.0
+          },
+          {
+            "KeyTime": 101.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 109.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 110.0,
+            "KeyValue": 42.0
+          },
+          {
+            "KeyTime": 111.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 119.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 120.0,
+            "KeyValue": 44.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+        "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+      },
+      "resistance_personal_cumulative": {
+        "InterpMode": "ERichCurveInterpMode::RCIM_Linear",
+        "Keys": [
+          {
+            "KeyTime": 0.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 9.0,
+            "KeyValue": 9.0
+          },
+          {
+            "KeyTime": 10.0,
+            "KeyValue": 11.0
+          },
+          {
+            "KeyTime": 19.0,
+            "KeyValue": 20.0
+          },
+          {
+            "KeyTime": 20.0,
+            "KeyValue": 24.0
+          },
+          {
+            "KeyTime": 29.0,
+            "KeyValue": 33.0
+          },
+          {
+            "KeyTime": 30.0,
+            "KeyValue": 41.0
+          },
+          {
+            "KeyTime": 39.0,
+            "KeyValue": 50.0
+          },
+          {
+            "KeyTime": 40.0,
+            "KeyValue": 64.0
+          },
+          {
+            "KeyTime": 49.0,
+            "KeyValue": 73.0
+          },
+          {
+            "KeyTime": 50.0,
+            "KeyValue": 93.0
+          },
+          {
+            "KeyTime": 59.0,
+            "KeyValue": 102.0
+          },
+          {
+            "KeyTime": 60.0,
+            "KeyValue": 126.0
+          },
+          {
+            "KeyTime": 69.0,
+            "KeyValue": 135.0
+          },
+          {
+            "KeyTime": 70.0,
+            "KeyValue": 163.0
+          },
+          {
+            "KeyTime": 79.0,
+            "KeyValue": 172.0
+          },
+          {
+            "KeyTime": 80.0,
+            "KeyValue": 204.0
+          },
+          {
+            "KeyTime": 89.0,
+            "KeyValue": 213.0
+          },
+          {
+            "KeyTime": 90.0,
+            "KeyValue": 249.0
+          },
+          {
+            "KeyTime": 99.0,
+            "KeyValue": 258.0
+          },
+          {
+            "KeyTime": 100.0,
+            "KeyValue": 296.0
+          },
+          {
+            "KeyTime": 109.0,
+            "KeyValue": 305.0
+          },
+          {
+            "KeyTime": 110.0,
+            "KeyValue": 347.0
+          },
+          {
+            "KeyTime": 119.0,
+            "KeyValue": 356.0
+          },
+          {
+            "KeyTime": 120.0,
+            "KeyValue": 400.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+        "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+      },
+      "resistance_team": {
+        "InterpMode": "ERichCurveInterpMode::RCIM_Linear",
+        "Keys": [
+          {
+            "KeyTime": 0.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 9.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 10.0,
+            "KeyValue": 6.0
+          },
+          {
+            "KeyTime": 11.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 19.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 20.0,
+            "KeyValue": 8.0
+          },
+          {
+            "KeyTime": 21.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 29.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 30.0,
+            "KeyValue": 10.0
+          },
+          {
+            "KeyTime": 31.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 39.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 40.0,
+            "KeyValue": 12.0
+          },
+          {
+            "KeyTime": 41.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 49.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 50.0,
+            "KeyValue": 14.0
+          },
+          {
+            "KeyTime": 51.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 59.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 60.0,
+            "KeyValue": 16.0
+          },
+          {
+            "KeyTime": 61.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 69.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 70.0,
+            "KeyValue": 18.0
+          },
+          {
+            "KeyTime": 71.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 79.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 80.0,
+            "KeyValue": 20.0
+          },
+          {
+            "KeyTime": 81.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 89.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 90.0,
+            "KeyValue": 22.0
+          },
+          {
+            "KeyTime": 91.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 99.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 100.0,
+            "KeyValue": 24.0
+          },
+          {
+            "KeyTime": 101.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 109.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 110.0,
+            "KeyValue": 24.0
+          },
+          {
+            "KeyTime": 111.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 119.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 120.0,
+            "KeyValue": 26.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+        "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+      },
+      "resistance_team_cumulative": {
+        "InterpMode": "ERichCurveInterpMode::RCIM_Linear",
+        "Keys": [
+          {
+            "KeyTime": 0.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 9.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 10.0,
+            "KeyValue": 6.0
+          },
+          {
+            "KeyTime": 19.0,
+            "KeyValue": 6.0
+          },
+          {
+            "KeyTime": 20.0,
+            "KeyValue": 14.0
+          },
+          {
+            "KeyTime": 29.0,
+            "KeyValue": 14.0
+          },
+          {
+            "KeyTime": 30.0,
+            "KeyValue": 24.0
+          },
+          {
+            "KeyTime": 39.0,
+            "KeyValue": 24.0
+          },
+          {
+            "KeyTime": 40.0,
+            "KeyValue": 36.0
+          },
+          {
+            "KeyTime": 49.0,
+            "KeyValue": 36.0
+          },
+          {
+            "KeyTime": 50.0,
+            "KeyValue": 50.0
+          },
+          {
+            "KeyTime": 59.0,
+            "KeyValue": 50.0
+          },
+          {
+            "KeyTime": 60.0,
+            "KeyValue": 66.0
+          },
+          {
+            "KeyTime": 69.0,
+            "KeyValue": 66.0
+          },
+          {
+            "KeyTime": 70.0,
+            "KeyValue": 84.0
+          },
+          {
+            "KeyTime": 79.0,
+            "KeyValue": 84.0
+          },
+          {
+            "KeyTime": 80.0,
+            "KeyValue": 104.0
+          },
+          {
+            "KeyTime": 89.0,
+            "KeyValue": 104.0
+          },
+          {
+            "KeyTime": 90.0,
+            "KeyValue": 126.0
+          },
+          {
+            "KeyTime": 99.0,
+            "KeyValue": 126.0
+          },
+          {
+            "KeyTime": 100.0,
+            "KeyValue": 150.0
+          },
+          {
+            "KeyTime": 109.0,
+            "KeyValue": 150.0
+          },
+          {
+            "KeyTime": 110.0,
+            "KeyValue": 174.0
+          },
+          {
+            "KeyTime": 119.0,
+            "KeyValue": 174.0
+          },
+          {
+            "KeyTime": 120.0,
+            "KeyValue": 200.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+        "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+      },
+      "technology_cost": {
+        "InterpMode": "ERichCurveInterpMode::RCIM_Linear",
+        "Keys": [
+          {
+            "KeyTime": 0.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 1.0,
+            "KeyValue": 300.0
+          },
+          {
+            "KeyTime": 10.0,
+            "KeyValue": 300.0
+          },
+          {
+            "KeyTime": 11.0,
+            "KeyValue": 600.0
+          },
+          {
+            "KeyTime": 20.0,
+            "KeyValue": 600.0
+          },
+          {
+            "KeyTime": 21.0,
+            "KeyValue": 900.0
+          },
+          {
+            "KeyTime": 30.0,
+            "KeyValue": 900.0
+          },
+          {
+            "KeyTime": 31.0,
+            "KeyValue": 1200.0
+          },
+          {
+            "KeyTime": 40.0,
+            "KeyValue": 1200.0
+          },
+          {
+            "KeyTime": 41.0,
+            "KeyValue": 1500.0
+          },
+          {
+            "KeyTime": 50.0,
+            "KeyValue": 1500.0
+          },
+          {
+            "KeyTime": 51.0,
+            "KeyValue": 1800.0
+          },
+          {
+            "KeyTime": 60.0,
+            "KeyValue": 1800.0
+          },
+          {
+            "KeyTime": 61.0,
+            "KeyValue": 2400.0
+          },
+          {
+            "KeyTime": 70.0,
+            "KeyValue": 2400.0
+          },
+          {
+            "KeyTime": 71.0,
+            "KeyValue": 3000.0
+          },
+          {
+            "KeyTime": 80.0,
+            "KeyValue": 3000.0
+          },
+          {
+            "KeyTime": 81.0,
+            "KeyValue": 3600.0
+          },
+          {
+            "KeyTime": 90.0,
+            "KeyValue": 3600.0
+          },
+          {
+            "KeyTime": 91.0,
+            "KeyValue": 4200.0
+          },
+          {
+            "KeyTime": 120.0,
+            "KeyValue": 4200.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+        "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+      },
+      "technology_personal": {
+        "InterpMode": "ERichCurveInterpMode::RCIM_Linear",
+        "Keys": [
+          {
+            "KeyTime": 0.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 1.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 9.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 10.0,
+            "KeyValue": 2.0
+          },
+          {
+            "KeyTime": 11.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 19.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 20.0,
+            "KeyValue": 4.0
+          },
+          {
+            "KeyTime": 21.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 29.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 30.0,
+            "KeyValue": 8.0
+          },
+          {
+            "KeyTime": 31.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 39.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 40.0,
+            "KeyValue": 14.0
+          },
+          {
+            "KeyTime": 41.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 49.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 50.0,
+            "KeyValue": 20.0
+          },
+          {
+            "KeyTime": 51.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 59.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 60.0,
+            "KeyValue": 24.0
+          },
+          {
+            "KeyTime": 61.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 69.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 70.0,
+            "KeyValue": 28.0
+          },
+          {
+            "KeyTime": 71.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 79.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 80.0,
+            "KeyValue": 32.0
+          },
+          {
+            "KeyTime": 81.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 89.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 90.0,
+            "KeyValue": 36.0
+          },
+          {
+            "KeyTime": 91.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 99.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 100.0,
+            "KeyValue": 38.0
+          },
+          {
+            "KeyTime": 101.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 109.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 110.0,
+            "KeyValue": 42.0
+          },
+          {
+            "KeyTime": 111.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 119.0,
+            "KeyValue": 1.0
+          },
+          {
+            "KeyTime": 120.0,
+            "KeyValue": 44.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+        "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+      },
+      "technology_personal_cumulative": {
+        "InterpMode": "ERichCurveInterpMode::RCIM_Linear",
+        "Keys": [
+          {
+            "KeyTime": 0.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 9.0,
+            "KeyValue": 9.0
+          },
+          {
+            "KeyTime": 10.0,
+            "KeyValue": 11.0
+          },
+          {
+            "KeyTime": 19.0,
+            "KeyValue": 20.0
+          },
+          {
+            "KeyTime": 20.0,
+            "KeyValue": 24.0
+          },
+          {
+            "KeyTime": 29.0,
+            "KeyValue": 33.0
+          },
+          {
+            "KeyTime": 30.0,
+            "KeyValue": 41.0
+          },
+          {
+            "KeyTime": 39.0,
+            "KeyValue": 50.0
+          },
+          {
+            "KeyTime": 40.0,
+            "KeyValue": 64.0
+          },
+          {
+            "KeyTime": 49.0,
+            "KeyValue": 73.0
+          },
+          {
+            "KeyTime": 50.0,
+            "KeyValue": 93.0
+          },
+          {
+            "KeyTime": 59.0,
+            "KeyValue": 102.0
+          },
+          {
+            "KeyTime": 60.0,
+            "KeyValue": 126.0
+          },
+          {
+            "KeyTime": 69.0,
+            "KeyValue": 135.0
+          },
+          {
+            "KeyTime": 70.0,
+            "KeyValue": 163.0
+          },
+          {
+            "KeyTime": 79.0,
+            "KeyValue": 172.0
+          },
+          {
+            "KeyTime": 80.0,
+            "KeyValue": 204.0
+          },
+          {
+            "KeyTime": 89.0,
+            "KeyValue": 213.0
+          },
+          {
+            "KeyTime": 90.0,
+            "KeyValue": 249.0
+          },
+          {
+            "KeyTime": 99.0,
+            "KeyValue": 258.0
+          },
+          {
+            "KeyTime": 100.0,
+            "KeyValue": 296.0
+          },
+          {
+            "KeyTime": 109.0,
+            "KeyValue": 305.0
+          },
+          {
+            "KeyTime": 110.0,
+            "KeyValue": 347.0
+          },
+          {
+            "KeyTime": 119.0,
+            "KeyValue": 356.0
+          },
+          {
+            "KeyTime": 120.0,
+            "KeyValue": 400.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+        "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+      },
+      "technology_team": {
+        "InterpMode": "ERichCurveInterpMode::RCIM_Linear",
+        "Keys": [
+          {
+            "KeyTime": 0.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 9.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 10.0,
+            "KeyValue": 6.0
+          },
+          {
+            "KeyTime": 11.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 19.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 20.0,
+            "KeyValue": 8.0
+          },
+          {
+            "KeyTime": 21.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 29.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 30.0,
+            "KeyValue": 10.0
+          },
+          {
+            "KeyTime": 31.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 39.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 40.0,
+            "KeyValue": 12.0
+          },
+          {
+            "KeyTime": 41.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 49.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 50.0,
+            "KeyValue": 14.0
+          },
+          {
+            "KeyTime": 51.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 59.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 60.0,
+            "KeyValue": 16.0
+          },
+          {
+            "KeyTime": 61.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 69.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 70.0,
+            "KeyValue": 18.0
+          },
+          {
+            "KeyTime": 71.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 79.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 80.0,
+            "KeyValue": 20.0
+          },
+          {
+            "KeyTime": 81.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 89.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 90.0,
+            "KeyValue": 22.0
+          },
+          {
+            "KeyTime": 91.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 99.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 100.0,
+            "KeyValue": 24.0
+          },
+          {
+            "KeyTime": 101.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 109.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 110.0,
+            "KeyValue": 24.0
+          },
+          {
+            "KeyTime": 111.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 119.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 120.0,
+            "KeyValue": 26.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+        "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+      },
+      "technology_team_cumulative": {
+        "InterpMode": "ERichCurveInterpMode::RCIM_Linear",
+        "Keys": [
+          {
+            "KeyTime": 0.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 9.0,
+            "KeyValue": 0.0
+          },
+          {
+            "KeyTime": 10.0,
+            "KeyValue": 6.0
+          },
+          {
+            "KeyTime": 19.0,
+            "KeyValue": 6.0
+          },
+          {
+            "KeyTime": 20.0,
+            "KeyValue": 14.0
+          },
+          {
+            "KeyTime": 29.0,
+            "KeyValue": 14.0
+          },
+          {
+            "KeyTime": 30.0,
+            "KeyValue": 24.0
+          },
+          {
+            "KeyTime": 39.0,
+            "KeyValue": 24.0
+          },
+          {
+            "KeyTime": 40.0,
+            "KeyValue": 36.0
+          },
+          {
+            "KeyTime": 49.0,
+            "KeyValue": 36.0
+          },
+          {
+            "KeyTime": 50.0,
+            "KeyValue": 50.0
+          },
+          {
+            "KeyTime": 59.0,
+            "KeyValue": 50.0
+          },
+          {
+            "KeyTime": 60.0,
+            "KeyValue": 66.0
+          },
+          {
+            "KeyTime": 69.0,
+            "KeyValue": 66.0
+          },
+          {
+            "KeyTime": 70.0,
+            "KeyValue": 84.0
+          },
+          {
+            "KeyTime": 79.0,
+            "KeyValue": 84.0
+          },
+          {
+            "KeyTime": 80.0,
+            "KeyValue": 104.0
+          },
+          {
+            "KeyTime": 89.0,
+            "KeyValue": 104.0
+          },
+          {
+            "KeyTime": 90.0,
+            "KeyValue": 126.0
+          },
+          {
+            "KeyTime": 99.0,
+            "KeyValue": 126.0
+          },
+          {
+            "KeyTime": 100.0,
+            "KeyValue": 150.0
+          },
+          {
+            "KeyTime": 109.0,
+            "KeyValue": 150.0
+          },
+          {
+            "KeyTime": 110.0,
+            "KeyValue": 174.0
+          },
+          {
+            "KeyTime": 119.0,
+            "KeyValue": 174.0
+          },
+          {
+            "KeyTime": 120.0,
+            "KeyValue": 200.0
+          }
+        ],
+        "DefaultValue": 3.4028235E+38,
+        "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+        "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+      }
+    }
+  }
+]

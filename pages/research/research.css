@@ -1,0 +1,46 @@
+tr td:nth-child(1) {
+    text-align: right;
+}
+
+tr td:nth-child(2) {
+    text-align: center;
+}
+
+tr td:nth-child(3) {
+    text-align: left;
+}
+
+table {
+    left: 67%;
+    position: absolute;
+    transform: translateX(-20%) translateY(-15%);
+}
+
+table.max {
+    transform: translateX(-15%) translateY(-15%);
+}
+
+td {
+    flex-wrap: wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+td img.col1 {
+    horiz-align: left;
+    padding-right: 5px;
+    position: absolute;
+    transform: translateX(-100%) translateY(2px);
+}
+
+td img:not(.col1) {
+    transform: translateY(2px);
+}
+
+h2 {
+    padding-bottom: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
