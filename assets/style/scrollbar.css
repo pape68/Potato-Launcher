@@ -1,0 +1,20 @@
+body::-webkit-scrollbar, #left::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-corner, #left::-webkit-scrollbar-corner {
+    background: #202020;
+}
+
+body::-webkit-scrollbar-thumb, #left::-webkit-scrollbar-thumb {
+    background-color: #444444;
+    border-radius: 10px;
+    border: 2px solid #202020;
+    background-clip: content-box;
+    min-width: 15px;
+    min-height: 30px;
+}
+
+body::-webkit-scrollbar-track, #left::-webkit-scrollbar-track {
+    background-color: #202020;
+}
