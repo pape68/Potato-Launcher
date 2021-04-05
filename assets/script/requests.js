@@ -10,8 +10,20 @@ function request(options){
         request.send(options.body ? options.body:'{}');
         request.onreadystatechange = () => {
             if (request.readyState !== 4) return;
-            resolve(JSON.parse(request.response));
+            if (request.response) return resolve(JSON.parse(request.response));
+            resolve();
         }
+    });
+}
+
+function deleteRequest(url, headers){
+    return new Promise(async resolve => {
+        let r = await request({
+            url: url,
+            headers: headers,
+            method: 'DELETE'
+        });
+        resolve(r);
     });
 }
 
@@ -39,6 +51,7 @@ function post(url, payload = '{}', headers = {}){
 }
 
 export const axios = {
+    delete: deleteRequest,
     get: get,
     post: post
 };

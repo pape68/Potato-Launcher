@@ -1,0 +1,28 @@
+tr td:nth-child(1) {
+    text-align: right;
+}
+tr td:nth-child(1) img {
+    horiz-align: left;
+    padding-right: 5px;
+    position: absolute;
+    transform: translateX(-100%) translateY(2px);
+}
+
+tr td:nth-child(2) {
+    text-align: left;
+}
+
+table {
+    left: 67%;
+    position: absolute;
+    transform: translateX(-25%);
+}
+
+td img {
+    padding-left: 2px;
+    transform: translateY(2px);
+}
+
+body {
+    overflow-x: hidden;
+}

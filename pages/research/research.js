@@ -39,7 +39,7 @@ async function research() {
         let table = document.createElement('table');
         function addRow(col1, col2, col3){
             let row = document.createElement('tr');
-            row.innerHTML = '<td><b>'+col1+'</b></td><td>'+col2+'</td><td>'+(col3 || '<img src="../../assets/img/blank.png" width="5%" alt="upgrade">')+'</td>';
+            row.innerHTML = '<td><b>'+col1+'</b></td><td>'+col2+'</td><td>'+(col3 || '<img src="../../assets/img/emojis/blank.png" width="5%" alt="upgrade">')+'</td>';
             table.appendChild(row);
         }
 
@@ -56,7 +56,7 @@ async function research() {
             let cost = 0;
 
             for (const item of costTable[0].ExportValue[stat.toLowerCase()+'_cost'].Keys){
-                if (item.KeyTime <= level) cost = item.KeyValue;
+                if (item.KeyTime <= level+1) cost = item.KeyValue;
             }
 
             if (level < 120){
@@ -64,13 +64,13 @@ async function research() {
                     addRow(
                         '<img src="../../assets/img/fort/'+stat.toLowerCase()+'.png" width="4%" class="col1" alt="'+stat+'"> '+stat,
                         level,
-                        '<img src="../../assets/img/up_arrow.png" style="cursor: pointer" width="5%" onclick="upgrade(\''+acc.accountId+'\', \''+stat.toLowerCase()+'\')" alt="upgrade"> <img src="../../assets/img/fort/research.png" width="4%" alt="research"> '+formatNum(cost)
+                        '<img src="../../assets/img/emojis/up_arrow.png" style="cursor: pointer" width="5%" onclick="upgrade(\''+acc.accountId+'\', \''+stat.toLowerCase()+'\')" alt="upgrade"> <img src="../../assets/img/fort/research.png" width="4%" alt="research"> '+formatNum(cost)
                     );
                 } else {
                     addRow(
                         '<img src="../../assets/img/fort/'+stat.toLowerCase()+'.png" width="4%" class="col1" alt="'+stat+'"> '+stat,
                         level,
-                        '<img src="../../assets/img/x.png" width="5%" alt="upgrade"> <img src="../../assets/img/fort/research.png" width="4%" alt="research"> '+formatNum(cost)
+                        '<img src="../../assets/img/emojis/x.png" width="5%" alt="upgrade"> <img src="../../assets/img/fort/research.png" width="4%" alt="research"> '+formatNum(cost)
                     )
                 }
             } else {

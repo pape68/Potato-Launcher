@@ -1,0 +1,35 @@
+#overlay {
+    background-color: #333333;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    opacity: 1;
+    overflow-y: scroll;
+    padding: 20px 10px 10px;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 69;
+}
+
+#overlay img {
+    position: absolute;
+    bottom: 20%;
+}
+
+#overlayClose {
+    right: 10px;
+    width: 5%;
+    top: 10px;
+}
+
+#overlayConfirm {
+    left: 20%;
+    width: 20%;
+}
+
+#overlayDeny {
+    right: 20%;
+    width: 20%;
+}

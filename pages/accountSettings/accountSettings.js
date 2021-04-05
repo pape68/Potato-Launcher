@@ -45,7 +45,7 @@ function accountSettings() {
 
         await electron.shell.openExternal('https://www.epicgames.com/id/exchange?exchangeCode='+xch.code);
         clearOutput();
-        outputText(`Opened browser for ${acc.displayName} <img src="../../assets/img/ok_hand.png" alt="ok hand" width=4%>`);
+        outputText(`Opened browser for ${acc.displayName} <img src="../../assets/img/emojis/ok_hand.png" alt="ok hand" width=4%>`);
     });
 }
 

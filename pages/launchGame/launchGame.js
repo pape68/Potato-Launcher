@@ -58,7 +58,7 @@ function launchGame(){
         );
 
         clearOutput();
-        outputText(`Launched game on ${acc.displayName} <img src="../../assets/img/ok_hand.png" alt="ok hand" width=4%>`);
+        outputText(`Launched game on ${acc.displayName} <img src="../../assets/img/emojis/ok_hand.png" alt="ok hand" width=4%>`);
     });
 }
 
