@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Potato Launcher - Account ID Lookup</title>
+        <title>Potato Launcher - Friends List</title>
 
-        <script src="accIdLookup.js" type="module"></script>
+        <script src="friends.js" type="module"></script>
+        <script src="../../assets/script/overlay.js"></script>
         <script src="../../assets/script/sidebar.js"></script>
 
         <link rel="stylesheet" type="text/css" href="../../assets/style/bgImage.css">
         <link rel="stylesheet" type="text/css" href="../../assets/style/input.css">
-        <link rel="stylesheet" type="text/css" href="accIdLookup.css">
+        <link rel="stylesheet" type="text/css" href="friends.css">
 
         <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <img src="../../assets/img/brightcore.png" id="background" alt="bg">
+        <label for="accounts"></label><select id="accounts"></select>
+        <button onclick="friends()">Load Friends List</button>
+        <br>
         <label><input type="text" placeholder="Display Name" id="input"></label>
-        <button id="lookup" onclick="lookupAcc()">Lookup</button>
+        <button onclick="sendRequest()">Send Request</button>
         <p id="output"></p>
     </body>
 </html>
