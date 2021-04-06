@@ -16,7 +16,7 @@ body {
     position: fixed;
     text-align: left;
     top: 0;
-    width: 33%;
+    width: 200px;
 }
 
 #left a {
@@ -33,6 +33,6 @@ body {
 }
 
 #right {
-    margin-left: 33%;
+    margin-left: 200px;
     padding-left: 10px;
 }

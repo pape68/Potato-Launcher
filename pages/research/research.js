@@ -29,7 +29,7 @@ async function research() {
     clearOutput();
     outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" class="loading" width="4%">');
 
-    api.ClaimCollectedResources(acc.accountId).then();
+    await api.ClaimCollectedResources(acc.accountId);
     new ExtendedCampaignProfile(acc.accountId, profile => {
         if (profile.errorMessage){
             clearOutput();

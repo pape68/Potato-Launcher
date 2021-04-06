@@ -26,8 +26,8 @@ async function lookupAcc(){
                     'AccountResource:voucher_cardpack_jackpot'];
         const vr = ['AccountResource:reagent_evolverarity_vr', 'AccountResource:reagent_alteration_upgrade_vr', 'AccountResource:reagent_c_t03',
                     'AccountResource:reagent_c_t02', 'AccountResource:reagent_c_t01', 'AccountResource:reagent_c_t04', 'AccountResource:currency_xrayllama'];
-        const r  = ['AccountResource:eventcurrency_scaling', 'AccountResource:eventcurrency_lunar', 'AccountResource:reagent_evolverarity_r',
-                    'AccountResource:reagent_alteration_upgrade_r', 'AccountResource:eventcurrency_summer'];
+        const r  = ['AccountResource:eventcurrency_adventure', 'AccountResource:eventcurrency_lunar', 'AccountResource:eventcurrency_scaling',
+                    'AccountResource:reagent_evolverarity_r', 'AccountResource:reagent_alteration_upgrade_r', 'AccountResource:eventcurrency_summer'];
         const uc = ['AccountResource:reagent_alteration_upgrade_uc'];
         /*const c  = ['AccountResource:reagent_alteration_ele_nature', 'AccountResource:reagent_alteration_ele_fire', 'AccountResource:reagent_alteration_ele_water',
                     'AccountResource:heroxp', 'AccountResource:reagent_alteration_generic', 'AccountResource:schematicxp', 'AccountResource:personnelxp',
