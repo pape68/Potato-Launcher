@@ -50,6 +50,23 @@ function convertAccountsWindow(){
     convertWindow.removeMenu();
 }
 
+function removeAccWindow(){
+    let rmWindow = new BrowserWindow({
+        width: 300,
+        height: 200,
+        title: 'Remove Account',
+        icon: './assets/img/brightcore.png',
+        webPreferences: {
+            contextIsolation: false,
+            enableRemoteModule: true,
+            nodeIntegration: true
+        }
+    });
+    rmWindow.webContents.openDevTools();
+    rmWindow.loadURL('file://'+__dirname+'/menu/account/rmAccount.html').then();
+    rmWindow.removeMenu();
+}
+
 function setPathWindow(){
     let pathWindow = new BrowserWindow({
         width: 350,
@@ -141,6 +158,12 @@ const menu = [
                 label: 'Exchange Code Login',
                 click(){
                     xchLoginWindow();
+                }
+            },
+            {
+                label: 'Remove Account',
+                click(){
+                    removeAccWindow();
                 }
             }
         ]
