@@ -62,7 +62,7 @@ function removeAccWindow(){
             nodeIntegration: true
         }
     });
-    rmWindow.webContents.openDevTools();
+    //rmWindow.webContents.openDevTools();
     rmWindow.loadURL('file://'+__dirname+'/menu/account/rmAccount.html').then();
     rmWindow.removeMenu();
 }
