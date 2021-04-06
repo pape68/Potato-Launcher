@@ -57,7 +57,7 @@ async function lookupAcc(){
 
         let table = document.createElement('table');
         table.innerHTML += '<tr><td><b>Account ID:</b></td><td>'+acc.id+'</td></tr>';
-        table.innerHTML += '<tr><td><b>Display Name:</b></td><td>'+acc.displayName+'</td></tr>';
+        if (acc.displayName) table.innerHTML += '<tr><td><b>Display Name:</b></td><td>'+acc.displayName+'</td></tr>';
         if (acc.externalAuths.psn) table.innerHTML += '<tr><td><b>PSN Username:</b></td><td>'+acc.externalAuths.psn.externalDisplayName+'</td></tr>';
         if (acc.externalAuths.twitch) table.innerHTML += '<tr><td><b>Twitch Username:</b></td><td>'+acc.externalAuths.twitch.externalDisplayName+'</td></tr>';
         if (acc.externalAuths.xbl) table.innerHTML += '<tr><td><b>Xbox Username:</b></td><td>'+acc.externalAuths.xbl.externalDisplayName+'</td></tr>';
