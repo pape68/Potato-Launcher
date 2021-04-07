@@ -11,13 +11,9 @@ tr td:nth-child(3) {
 }
 
 table {
-    left: 67%;
+    left: 50%;
     position: absolute;
-    transform: translateX(-20%) translateY(-15%);
-}
-
-table.max {
-    transform: translateX(-15%) translateY(-15%);
+    transform: translateY(-15%);
 }
 
 td {
