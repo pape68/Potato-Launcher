@@ -31,7 +31,7 @@ function get(url, headers) {
     return new Promise(async resolve => {
         let r = await request({
             url: url,
-            headers: headers,
+            headers: headers||{},
             method: 'GET'
         });
         resolve(r);

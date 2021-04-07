@@ -21,14 +21,13 @@ function outputText(text){
     document.getElementById('output').innerHTML += text+'<br>';
 }
 
-function parseEntry(entry){
+function parseEntry(entry,gudShop){
+    console.log(gudShop[gudShop.findIndex(e =>e.offerId===entry.offerId)])
     return {
-        name: entry.devName
-            .split('for')[0]
-            .split(',')[0]
-            .split('1 x ')[1],
-        devName: entry.devName,
-        rarity: 'common',
+        name:gudShop[gudShop.findIndex(e =>e.offerId===entry.offerId)].displayName,
+        devName:  entry.devName,
+        imageUrl:gudShop[gudShop.findIndex(e =>e.offerId===entry.offerId)].displayAssets[0].url,
+        rarity: gudShop[gudShop.findIndex(e =>e.offerId===entry.offerId)].series?gudShop[gudShop.findIndex(e =>e.offerId===entry.offerId)].series.id.toLowerCase():gudShop[gudShop.findIndex(e =>e.offerId===entry.offerId)].rarity.id.toLowerCase(),
         price: parseInt(entry.devName
             .split('for ')[1]
             .split('Mtx')[0]
@@ -47,6 +46,10 @@ async function brShop(){
             clearOutput();
             return outputText(token);
         }
+        let gudShop = (await axios.get('https://fortniteapi.io/v2/shop?lang=en',            {
+            Authorization: '2840821f-df7a0c5e-891f3bb7-df9aa92a'
+        })).shop;
+        // console.log(allitems)
         let shop = await axios.get('https://fortnite-public-service-prod11.ol.epicgames.com/fortnite/api/storefront/v2/catalog',
             {
                 Authorization: 'bearer '+token
@@ -59,9 +62,9 @@ async function brShop(){
         let tr = document.createElement('tr');
         for (const storefront of storefronts){
             for (const rawEntry of storefront.catalogEntries){
-                let entry = parseEntry(rawEntry);
+                let entry = parseEntry(rawEntry,gudShop);
 
-                tr.innerHTML += '<td class="'+entry.rarity+'">'+entry.name+'</td>';
+                tr.innerHTML += '<td class="'+entry.rarity+'"><img width="128" src="'+entry.imageUrl+'"><br>'+entry.name+'</td>';
 
                 i++;
                 if (i === 5){
