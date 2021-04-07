@@ -28,6 +28,27 @@ export const api = {
         });
     },
     ClaimLoginReward: (accountId) => { return composeMcp(accountId, 'ClaimLoginReward', 'campaign') },
+    GiftCatalogEntry: (accountId, offerId, expectedTotalPrice, receiverAccountId, personalMessage) => { return composeMcp(accountId, 'GiftCatalogEntry', 'common_core', JSON.stringify(
+        {
+            offerId: offerId,
+            purchaseQuantity: 1,
+            currencySubType: 'MtxCurrency',
+            expectedTotalPrice: expectedTotalPrice,
+            gameContext: '',
+            receiverAccountIds: [receiverAccountId],
+            giftWrapTemplateId: '',
+            personalMessage: personalMessage
+        }
+    )) },
+    PurchaseCatalogEntry: (accountId, offerId, expectedTotalPrice) => { return composeMcp(accountId, 'PurchaseCatalogEntry', 'common_core', JSON.stringify(
+        {
+            offerId: offerId,
+            purchaseQuantity: 1,
+            currencySubType: 'MtxCurrency',
+            expectedTotalPrice: expectedTotalPrice,
+            gameContext: ''
+        }
+    )) },
     PurchaseResearchStatUpgrade: (accountId, stat) => { return composeMcp(accountId, 'PurchaseResearchStatUpgrade', 'campaign', '{"statId":"'+stat+'"}') },
     QueryProfile: (accountId, profile) => { return composeMcp(accountId, 'QueryProfile', profile) },
     SetHomebaseName: (accountId, homebaseName) => { return composeMcp(accountId, 'SetHomebaseName', 'common_public', '{"homebaseName":"'+homebaseName+'"}') }

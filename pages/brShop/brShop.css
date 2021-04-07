@@ -3,6 +3,40 @@ td {
     padding: 4px;
 }
 
+h4 {
+    margin: 0;
+}
+
+button {
+    margin-bottom: 5px;
+}
+
+/*#overlay img:not([id]) {
+    bottom: 50%;
+    left: 50%;
+    position: fixed;
+    transform: translateX(-175%) translateY(-50%);
+    width: 5%;
+}*/
+#overlay h2 {
+    bottom: 50%;
+    left: 50%;
+    position: fixed;
+    transform: translateY(25%);
+}
+.v {
+    background-image: url("../../assets/img/vbucks.png");
+    background-size: 100%;
+    bottom: 50%;
+    color: rgba(0, 0, 0, 0);
+    left: 50%;
+    margin: 0;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    position: fixed;
+    transform: translateX(-125%) translateY(-25%);
+}
+
 .legendary {
     background: radial-gradient(#FF9933, #AA4400);
     outline: 4px solid #DD7716;
@@ -26,5 +60,56 @@ td {
 .common {
     background: radial-gradient(#888888, #333333);
     outline: 4px solid #777777;
+    outline-offset: -4px;
+}
+
+.creatorcollabseries {
+    background: radial-gradient(#00CCCC, #008888);
+    outline: 4px solid #00AAAA;
+    outline-offset: -4px;
+}
+.dark {
+    background: radial-gradient(#DD77EE, #9933AA);
+    outline: 4px solid #BB55CC;
+    outline-offset: -4px;
+}
+.dc {
+    background: radial-gradient(#000066, #000000);
+    outline: 4px solid #CCCC55;
+    outline-offset: -4px;
+}
+.frozen {
+    background: radial-gradient(#BBFFFF, #66BBBB);
+    outline: 4px solid #99DDDD;
+    outline-offset: -4px;
+}
+.lava {
+    background: radial-gradient(#FF6633, #BB2200);
+    outline: 4px solid #DD4411;
+    outline-offset: -4px;
+}
+.marvel {
+    background: radial-gradient(#FF0000, #AA0000);
+    outline: 4px solid #CC0000;
+    outline-offset: -4px;
+}
+.gaminglegends {
+    background: radial-gradient(#8888FF, #4444BB);
+    outline: 4px solid #6666DD;
+    outline-offset: -4px;
+}
+.shadow {
+    background: radial-gradient(#FFFFFF, #222222);
+    outline: 4px solid #777777;
+    outline-offset: -4px;
+}
+.slurp {
+    background: radial-gradient(#00CCCC, #008888);
+    outline: 4px solid #00AAAA;
+    outline-offset: -4px;
+}
+.starwars {
+    background: radial-gradient(#888888, #222222);
+    outline: 4px solid #444444;
     outline-offset: -4px;
 }

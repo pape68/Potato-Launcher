@@ -7,6 +7,11 @@ function createOverlay(content, onConfirm, ...onConfirmArgs){
         +'<img id="overlayDeny" style="cursor: pointer" src="../../assets/img/emojis/x.png" onclick="document.getElementById(\'overlay\').remove()" alt="deny">'
         +'</div>';
     document.getElementById('overlayConfirm').onclick = () => {
+        //idc im done with it not working :KEKW:
+        //for br shop only
+        if (document.getElementById('giftTo')) window.giftTo = document.getElementById('giftTo').value;
+        if (document.getElementById('message')) window.message = document.getElementById('message').value;
+
         onConfirm(...onConfirmArgs);
         document.getElementById('overlay').remove();
     };
