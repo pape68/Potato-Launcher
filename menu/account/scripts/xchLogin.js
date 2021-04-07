@@ -4,7 +4,7 @@ const fs = require('fs');
 
 async function xchLogin(){
     const input = document.getElementById('input').value;
-    document.getElementById('output').innerHTML = 'Loading <img src="../../assets/img/loading.gif" width="5%" alt="loading">';
+    document.getElementById('output').innerHTML = 'Loading <img src="../../assets/img/loading.gif" width="20pt" alt="loading">';
     let token = await axios.post('https://account-public-service-prod.ol.epicgames.com/account/api/oauth/token',
         'grant_type=exchange_code&exchange_code='+input,
         {

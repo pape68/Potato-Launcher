@@ -22,7 +22,7 @@ function outputText(text) {
 
 async function setHbName() {
     clearOutput();
-    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="4%">');
+    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="16pt">');
     let input = document.getElementById('accounts').value;
     let acc = accounts.filter(acc => acc.accountId === input)[0];
     let hbName = document.getElementById('setHbName').value;

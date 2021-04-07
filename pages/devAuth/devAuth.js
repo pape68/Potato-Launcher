@@ -26,7 +26,7 @@ function devAuth() {
     let input = document.getElementById('accounts').value;
     let acc = accounts.filter(acc => acc.accountId === input)[0];
     clearOutput();
-    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" class="loading" width="4%">');
+    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" class="loading" width="16pt">');
     new VerifiedToken(acc.accountId, async token => {
         if (token.length !== 32){
             clearOutput();
@@ -72,7 +72,7 @@ function devAuth() {
 
 async function delDevice(accountId, deviceId){
     clearOutput();
-    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" class="loading" width="4%">');
+    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" class="loading" width="16pt">');
     new VerifiedToken(accountId, async token => {
         let r = await axios.delete('https://account-public-service-prod.ol.epicgames.com/account/api/public/account/'+accountId+'/deviceAuth/'+deviceId,
             {

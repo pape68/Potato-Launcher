@@ -26,7 +26,7 @@ function outputText(text) {
 let ssds = ['Stonewood', 'Plankerton', 'Canny Valley', 'Twine Peaks'];
 async function loadSsd(accountId, ssd){
     clearOutput();
-    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" class="loading" width="4%">');
+    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" class="loading" width="16pt">');
     new VerifiedToken(accountId, async token => {
         if (token.length !== 32){
             clearOutput();
@@ -68,7 +68,7 @@ async function ssd() {
     let input = document.getElementById('accounts').value;
     let acc = accounts.filter(acc => acc.accountId === input)[0];
     clearOutput();
-    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" class="loading" width="4%">');
+    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" class="loading" width="16pt">');
 
     let metadata = await api.QueryProfile(acc.accountId, 'metadata');
     if (metadata.errorMessage){

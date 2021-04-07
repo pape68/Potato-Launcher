@@ -45,7 +45,7 @@ async function brShop() {
     let input = document.getElementById('accounts').value;
     let acc = accounts.filter(acc => acc.accountId === input)[0];
     clearOutput();
-    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="4%">');
+    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="16pt">');
     new VerifiedToken(acc.accountId, async token => {
         if (token.length !== 32) {
             clearOutput();
@@ -123,7 +123,7 @@ async function giftItem(accountId, offerId, price){
     let giftTo = window.giftTo;
     let msg = window.message;
     clearOutput();
-    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="4%">');
+    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="16pt">');
     new VerifiedToken(accountId, async token => {
         if (token.length !== 32) {
             clearOutput();
@@ -140,7 +140,7 @@ async function giftItem(accountId, offerId, price){
 //this also needs to be tested, i just dont have vkeks :konk:
 async function purchaseItem(accountId, offerId, price){
     clearOutput();
-    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="4%">');
+    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="16pt">');
     new VerifiedToken(accountId, async token => {
         if (token.length !== 32) {
             clearOutput();

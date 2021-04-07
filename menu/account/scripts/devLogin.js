@@ -6,7 +6,7 @@ async function xchLogin(){
     const input = document.getElementById('input').value;
     const input1 = document.getElementById('input1').value;
     const input2 = document.getElementById('input2').value;
-    document.getElementById('output').innerHTML = 'Loading <img src="../../assets/img/loading.gif" width="5%" alt="loading">';
+    document.getElementById('output').innerHTML = 'Loading <img src="../../assets/img/loading.gif" width="20pt" alt="loading">';
     let token = await axios.post('https://account-public-service-prod.ol.epicgames.com/account/api/oauth/token',
         'grant_type=device_auth&account_id='+input+'&device_id='+input1+'&secret='+input2,
         {

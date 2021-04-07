@@ -25,7 +25,7 @@ async function vbuck() {
     let input = document.getElementById('accounts').value;
     let acc = accounts.filter(acc => acc.accountId === input)[0];
     clearOutput();
-    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="4%">');
+    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="16pt">');
 
     let ccProfile = await api.QueryProfile(acc.accountId, 'common_core');
     ccProfile = ccProfile.profileChanges[0].profile.items;

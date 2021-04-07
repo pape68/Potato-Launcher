@@ -12,7 +12,7 @@ function outputText(text){
 
 async function lookupAcc(){
     clearOutput();
-    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="4%">');
+    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="16pt">');
     let input = document.getElementById('input').value;
     new CampaignProfile(input, (profile, acc) => {
         clearOutput();
@@ -82,7 +82,7 @@ async function lookupAcc(){
         }
         if (i !== 5) table.appendChild(tr);
 
-        document.getElementById('output').innerHTML += '<h1>'+acc.displayName+'</h1>';
+        // document.getElementById('output').innerHTML += '<h1>'+acc.displayName+'</h1>';
         document.getElementById('output').appendChild(table);
     });
 }

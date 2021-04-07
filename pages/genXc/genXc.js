@@ -26,7 +26,7 @@ function genXc() {
     let input = document.getElementById('accounts').value;
     let acc = accounts.filter(acc => acc.accountId === input)[0];
     clearOutput();
-    outputText('Generating exchange on ' + acc.displayName + ' <img src="../../assets/img/loading.gif" alt="loading" width="4%">');
+    outputText('Generating exchange on ' + acc.displayName + ' <img src="../../assets/img/loading.gif" alt="loading" width="16pt">');
 
     new VerifiedToken(input, async token => {
         if (token.length !== 32) {

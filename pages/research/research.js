@@ -27,7 +27,7 @@ async function research() {
     let input = document.getElementById('accounts').value;
     let acc = accounts.filter(acc => acc.accountId === input)[0];
     clearOutput();
-    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" class="loading" width="4%">');
+    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" class="loading" width="16pt">');
 
     await api.ClaimCollectedResources(acc.accountId);
     new ExtendedCampaignProfile(acc.accountId, profile => {
@@ -39,7 +39,7 @@ async function research() {
         let table = document.createElement('table');
         function addRow(col1, col2, col3){
             let row = document.createElement('tr');
-            row.innerHTML = '<td><b>'+col1+'</b></td><td>'+col2+'</td><td>'+(col3 || '<img src="../../assets/img/emojis/blank.png" width="5%" alt="upgrade">')+'</td>';
+            row.innerHTML = '<td><b>'+col1+'</b></td><td>'+col2+'</td><td>'+(col3 || '<img src="../../assets/img/emojis/blank.png" width="16pt" alt="upgrade">')+'</td>';
             table.appendChild(row);
         }
 
@@ -48,7 +48,7 @@ async function research() {
                 .filter(item => profile.items[item].templateId === 'Token:collectionresource_nodegatetoken01')[0]
             ].quantity;
         clearOutput();
-        outputText('<h2><img src="../../assets/img/fort/research.png" width="4%" alt="research"> '+formatNum(researchPoints)+'</h2>');
+        outputText('<h2><img src="../../assets/img/fort/research.png" width="16pt" alt="research"> '+formatNum(researchPoints)+'</h2>');
 
         let max = 0;
         for (const stat of ['Fortitude', 'Offense', 'Resistance', 'Technology']){
@@ -62,21 +62,21 @@ async function research() {
             if (level < 120){
                 if (cost <= researchPoints){
                     addRow(
-                        '<img src="../../assets/img/fort/'+stat.toLowerCase()+'.png" width="4%" class="col1" alt="'+stat+'"> '+stat,
+                        '<img src="../../assets/img/fort/'+stat.toLowerCase()+'.png" width="16pt" class="col1" alt="'+stat+'"> '+stat,
                         level,
-                        '<img src="../../assets/img/emojis/up_arrow.png" style="cursor: pointer" width="5%" onclick="upgrade(\''+acc.accountId+'\', \''+stat.toLowerCase()+'\')" alt="upgrade"> <img src="../../assets/img/fort/research.png" width="4%" alt="research"> '+formatNum(cost)
+                        '<img src="../../assets/img/emojis/up_arrow.png" style="cursor: pointer" width="16pt" onclick="upgrade(\''+acc.accountId+'\', \''+stat.toLowerCase()+'\')" alt="upgrade"> <img src="../../assets/img/fort/research.png" width="16pt" alt="research"> '+formatNum(cost)
                     );
                 } else {
                     addRow(
-                        '<img src="../../assets/img/fort/'+stat.toLowerCase()+'.png" width="4%" class="col1" alt="'+stat+'"> '+stat,
+                        '<img src="../../assets/img/fort/'+stat.toLowerCase()+'.png" width="16pt" class="col1" alt="'+stat+'"> '+stat,
                         level,
-                        '<img src="../../assets/img/emojis/x.png" width="5%" alt="upgrade"> <img src="../../assets/img/fort/research.png" width="4%" alt="research"> '+formatNum(cost)
+                        '<img src="../../assets/img/emojis/x.png" width="16pt" alt="upgrade"> <img src="../../assets/img/fort/research.png" width="16pt" alt="research"> '+formatNum(cost)
                     )
                 }
             } else {
                 max++;
                 addRow(
-                    '<img src="../../assets/img/fort/'+stat.toLowerCase()+'.png" width="4%" class="col1" alt="'+stat+'"> '+stat,
+                    '<img src="../../assets/img/fort/'+stat.toLowerCase()+'.png" width="16pt" class="col1" alt="'+stat+'"> '+stat,
                     level
                 );
             }

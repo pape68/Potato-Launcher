@@ -31,7 +31,7 @@ function friends() {
     let input = document.getElementById('accounts').value;
     let acc = accounts.filter(acc => acc.accountId === input)[0];
     clearOutput();
-    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" class="loading" width="4%">');
+    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" class="loading" width="16pt">');
     new VerifiedToken(acc.accountId, async token => {
         if (token.length !== 32){
             clearOutput();
@@ -115,7 +115,7 @@ function friends() {
 
 async function addFriend(accountId, friendId){
     clearOutput();
-    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="4%">');
+    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="16pt">');
     new VerifiedToken(accountId, async token => {
         if (token.length !== 32){
             clearOutput();
@@ -138,7 +138,7 @@ async function addFriend(accountId, friendId){
 
 async function blockUser(accountId, friendId){
     clearOutput();
-    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="4%">');
+    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="16pt">');
     new VerifiedToken(accountId, async token => {
         if (token.length !== 32){
             clearOutput();
@@ -161,7 +161,7 @@ async function blockUser(accountId, friendId){
 
 async function delFriend(accountId, friendId){
     clearOutput();
-    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="4%">');
+    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="16pt">');
     new VerifiedToken(accountId, async token => {
         if (token.length !== 32){
             clearOutput();
@@ -183,7 +183,7 @@ async function delFriend(accountId, friendId){
 
 async function sendRequest(){
     clearOutput();
-    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="4%">');
+    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="16pt">');
     new VerifiedToken(null, async token => {
         let input = document.getElementById('input').value;
         let myInput = document.getElementById('accounts').value;

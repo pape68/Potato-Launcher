@@ -29,7 +29,7 @@ function launchGame(){
     let path = fs.readFileSync(process.env.appdata+'/a.bakedpotato/fnappv2/path.txt').toString();
     if (!path) return outputText('Error: Fortnite Path not set');
     let acc = accounts.filter(acc => acc.accountId === input)[0];
-    outputText('Launching game on '+acc.displayName+' <img src="../../assets/img/loading.gif" alt="loading" width="4%">');
+    outputText('Launching game on '+acc.displayName+' <img src="../../assets/img/loading.gif" alt="loading" width="16pt">');
 
     new VerifiedToken(input, async token => {
         if (token.length !== 32){
@@ -58,7 +58,7 @@ function launchGame(){
         );
 
         clearOutput();
-        outputText(`Launched game on ${acc.displayName} <img src="../../assets/img/emojis/ok_hand.png" alt="ok hand" width=4%>`);
+        outputText(`Launched game on ${acc.displayName} <img src="../../assets/img/emojis/ok_hand.png" alt="ok hand" width="16pt">`);
     });
 }
 

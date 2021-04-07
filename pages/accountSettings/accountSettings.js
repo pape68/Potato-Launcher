@@ -26,7 +26,7 @@ function accountSettings() {
     let input = document.getElementById('accounts').value;
     let acc = accounts.filter(acc => acc.accountId === input)[0];
     clearOutput();
-    outputText('Opening account settings for ' + acc.displayName + ' <img src="../../assets/img/loading.gif" alt="loading" width="4%">');
+    outputText('Opening account settings for ' + acc.displayName + ' <img src="../../assets/img/loading.gif" alt="loading" width="16pt">');
 
     new VerifiedToken(input, async token => {
         if (token.length !== 32) {
@@ -45,7 +45,7 @@ function accountSettings() {
 
         await electron.shell.openExternal('https://www.epicgames.com/id/exchange?exchangeCode='+xch.code);
         clearOutput();
-        outputText(`Opened browser for ${acc.displayName} <img src="../../assets/img/emojis/ok_hand.png" alt="ok hand" width=4%>`);
+        outputText(`Opened browser for ${acc.displayName} <img src="../../assets/img/emojis/ok_hand.png" alt="ok hand" width=16pt>`);
     });
 }
 
