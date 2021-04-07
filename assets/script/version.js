@@ -1,17 +1,20 @@
 import { axios } from './requests.js';
 
-const thisTag = '2.0.0'.split('.');
+const thisTag = '2.0.1'.split('.').map(i => parseInt(i));
 
 function output(text){
     document.getElementById('update').innerHTML = text;
 }
 
 axios.get('https://api.github.com/repos/a-bakedpotato/Potato-Launcher-Dist/releases').then(versions => {
-    let latestTag = versions[0]?.tag_name?.split('.') ?? thisTag;
+    let latestTag = versions[0]?.tag_name?.substr(1).split('.').map(i => parseInt(i)) ?? thisTag;
+    console.log(latestTag);
     if (thisTag === latestTag || !latestTag) return null;
 
-    let i = 0;
-    for (i; thisTag[i] !== latestTag[i]; i++){}
+    let i = -1;
+    if (thisTag[0] < latestTag[0]) i += 1;
+    else if (thisTag[1] < latestTag[1]) i += 2;
+    else if (thisTag[2] < latestTag[2]) i += 3;
 
     switch(i){
         case 0:
