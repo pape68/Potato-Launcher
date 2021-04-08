@@ -11,7 +11,7 @@ app.on('ready', () => {
             nodeIntegration: true
         }
     });
-    window.webContents.openDevTools();
+    //window.webContents.openDevTools();
     //window.webContents.setVisualZoomLevelLimits(1, 3).then(); //not working? idk
     window.loadURL('file://'+__dirname+'/index.html').then();
 
