@@ -15,10 +15,13 @@
     </head>
     <body>
         <img src="../../assets/img/brightcore.png" id="background" alt="bg">
-        <label>
-            <input type="text" placeholder="Display Name" id="input">
-        </label>
-        <button id="lookup" onclick="lookupAcc()">Lookup</button>
+        <form onsubmit="return false">
+            <label><select id="search">
+                <option value="">Search</option>
+            </select></label>
+            <label><input type="text" placeholder="Display Name" id="input"></label>
+            <button id="lookup" onclick="lookupAcc()">Lookup</button>
+        </form>
         <p id="output"></p>
     </body>
 </html>

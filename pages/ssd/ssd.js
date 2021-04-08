@@ -80,7 +80,7 @@ async function ssd() {
     for (const ssd of Object.keys(profile.items).filter(key => ssds[parseInt(profile.items[key].templateId.substr(-1))-1]).map(key => profile.items[key]).sort((a, b) => a.templateId.localeCompare(b.templateId))){
         let name = ssds[parseInt(ssd.templateId.substr(-1))-1];
         let row = document.createElement('tr');
-        row.innerHTML = '<td>'+name+'</td><td><img src="../../assets/img/emojis/information_source.png" width="8%" style="cursor: pointer" onclick="loadSsd(\''+acc.accountId+'\', '+JSON.stringify(ssd).replace(/"/g, '\'')+')"></td>';
+        row.innerHTML = '<td>'+name+((ssd.attributes.outpost_core_info.highestEnduranceWaveReached) ? ' Endurance Wave '+ssd.attributes.outpost_core_info.highestEnduranceWaveReached:' Level '+ssd.attributes.level)+'</td><td><img src="../../assets/img/emojis/information_source.png" width="8%" style="cursor: pointer" onclick="loadSsd(\''+acc.accountId+'\', '+JSON.stringify(ssd).replace(/"/g, '\'')+')"></td>';
         table.appendChild(row);
     }
 

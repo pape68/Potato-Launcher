@@ -12,6 +12,7 @@ app.on('ready', () => {
         }
     });
     //window.webContents.openDevTools();
+    //window.webContents.setVisualZoomLevelLimits(1, 3).then(); //not working? idk
     window.loadURL('file://'+__dirname+'/index.html').then();
 
     const mainMenu = Menu.buildFromTemplate(menu);

@@ -7,9 +7,9 @@ tr td:nth-child(2) {
 }
 
 table {
-    left: 67%;
+    left: 48%;
     position: absolute;
-    transform: translateX(-20%) translateY(-15%);
+    /*transform: translateX(-20%) translateY(-15%);*/
 }
 
 td {

@@ -33,7 +33,10 @@ async function vbuck() {
     clearOutput();
     let total = 0;
     for (const item of Object.values(ccProfile).filter(i => i.templateId.startsWith('Currency:')).sort((a, b) => b.quantity-a.quantity)){
-        outputText('<b>'+formatNum(item.quantity)+' x</b> '+item.attributes.platform+' '+item.templateId.split('Mtx')[1]);
+        outputText('<b>'+formatNum(item.quantity)+' x</b> '+item.attributes.platform+' '+item.templateId.split('Mtx')[1]
+            .replace('Complimentary', 'Complimentary (STW)')
+            .replace('Giveaway', 'Giveaway (BR)')
+        );
         total += item.quantity;
     }
     outputText('<h2>'+formatNum(total)+' V-Bucks</h2>');

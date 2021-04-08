@@ -5,6 +5,14 @@ const fs = require('fs');
 let accounts = [];
 if (fs.existsSync(process.env.appdata + '/a.bakedpotato/fnappv2/accounts.json')) accounts = JSON.parse(fs.readFileSync(process.env.appdata + '/a.bakedpotato/fnappv2/accounts.json').toString());
 
+const select = document.getElementById('search');
+for (const account of accounts) {
+    let acc = document.createElement('option');
+    acc.textContent = account.displayName;
+    acc.value = account.accountId;
+    select.appendChild(acc);
+}
+
 function clearOutput(){
     document.getElementById('output').innerHTML = '';
 }
@@ -17,7 +25,7 @@ async function lookupAcc(){
     clearOutput();
     outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="16pt">');
     new VerifiedToken(null, async token => {
-        let input = document.getElementById('input').value;
+        let input = document.getElementById('search').value || document.getElementById('input').value;
 
         if (token.length !== 32){
             clearOutput();

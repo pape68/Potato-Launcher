@@ -1,6 +1,16 @@
 import { CampaignProfile } from '../../assets/script/CampaignProfile.js';
 
 const fs = require('fs');
+let accounts = [];
+if (fs.existsSync(process.env.appdata + '/a.bakedpotato/fnappv2/accounts.json')) accounts = JSON.parse(fs.readFileSync(process.env.appdata + '/a.bakedpotato/fnappv2/accounts.json').toString());
+
+const select = document.getElementById('search');
+for (const account of accounts) {
+    let acc = document.createElement('option');
+    acc.textContent = account.displayName;
+    acc.value = account.accountId;
+    select.appendChild(acc);
+}
 
 function clearOutput(){
     document.getElementById('output').innerHTML = '';
@@ -13,7 +23,7 @@ function outputText(text){
 async function lookupAcc(){
     clearOutput();
     outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="16pt">');
-    let input = document.getElementById('input').value;
+    let input = document.getElementById('search').value || document.getElementById('input').value;
     new CampaignProfile(input, (profile, acc) => {
         clearOutput();
         if (typeof profile === 'string') return outputText(profile);
@@ -82,7 +92,7 @@ async function lookupAcc(){
         }
         if (i !== 5) table.appendChild(tr);
 
-        // document.getElementById('output').innerHTML += '<h1>'+acc.displayName+'</h1>';
+        document.getElementById('output').innerHTML += '<h1>'+acc.displayName+'</h1>';
         document.getElementById('output').appendChild(table);
     });
 }
