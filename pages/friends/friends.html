@@ -19,10 +19,11 @@
         <label for="accounts"></label><select id="accounts"></select>
         <button onclick="friends()">Load Friends List</button>
         <br>
-        <form action="#">
+        <form onsubmit="return false">
             <label><input type="text" placeholder="Display Name" id="input"></label>
             <button onclick="sendRequest()">Send Request</button>
         </form>
+        <label><input type="text" placeholder="Search" id="search"></label>
         <p id="output"></p>
     </body>
 </html>

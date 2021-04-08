@@ -27,6 +27,7 @@ function outputText(text) {
     document.getElementById('output').innerHTML += text + '<br>';
 }
 
+let hasHeadless = false;
 function friends() {
     let input = document.getElementById('accounts').value;
     let acc = accounts.filter(acc => acc.accountId === input)[0];
@@ -67,14 +68,12 @@ function friends() {
             let incomingTable = document.createElement('table');
             incomingTable.id = 'incomingTable';
 
-            let width = 5;
-            if (incoming.filter(f => !f.displayName).length) width = 10;
             for (const request of incoming.sort((a, b) => (a.displayName || a.accountId).toLowerCase().localeCompare((b.displayName || b.accountId).toLowerCase()))){
                 if (!request.displayName) incomingTable.classList.add('noDisplayName');
-                incomingTable.innerHTML += '<tr><td>'+(request.displayName || request.accountId)+'</td><td>' +
-                    '<img src="../../assets/img/emojis/white_check_mark.png" onclick="addFriend(\''+acc.accountId+'\',\''+request.accountId+'\')" style="cursor: pointer" width="'+width+'%" alt="accept"> ' +
-                    '<img src="../../assets/img/emojis/x.png" onclick="delFriend(\''+acc.accountId+'\', \''+request.accountId+'\')" style="cursor: pointer" width="'+width+'%" alt="deny"> ' +
-                    '<img src="../../assets/img/emojis/no_entry_sign.png" onclick="createOverlay(\'Are you sure you want to block this user?<br>'+(request.displayName || request.accountId)+'\', blockUser, \''+acc.accountId+'\', \''+request.accountId+'\')" style="cursor: pointer" width="'+width+'%" alt="block"></td></tr>'
+                incomingTable.innerHTML += '<tr><td class="friend">'+(request.displayName || request.accountId)+'</td><td>' +
+                    '<img src="../../assets/img/emojis/white_check_mark.png" onclick="addFriend(\''+acc.accountId+'\',\''+request.accountId+'\')" style="cursor: pointer" width="16pt" alt="accept"> ' +
+                    '<img src="../../assets/img/emojis/x.png" onclick="delFriend(\''+acc.accountId+'\', \''+request.accountId+'\')" style="cursor: pointer" width="16pt" alt="deny"> ' +
+                    '<img src="../../assets/img/emojis/no_entry_sign.png" onclick="createOverlay(\'Are you sure you want to block this user?<br>'+(request.displayName || request.accountId)+'\', blockUser, \''+acc.accountId+'\', \''+request.accountId+'\')" style="cursor: pointer" width="16pt" alt="block"></td></tr>'
             }
 
             document.getElementById('output').appendChild(incomingTable);
@@ -85,13 +84,11 @@ function friends() {
             let outgoingTable = document.createElement('table');
             outgoingTable.id = 'outgoingTable';
 
-            let width = 5;
-            if (outgoing.filter(f => !f.displayName).length) width = 10;
             for (const request of outgoing.sort((a, b) => (a.displayName || a.accountId).toLowerCase().localeCompare((b.displayName || b.accountId).toLowerCase()))){
                 if (!request.displayName) outgoingTable.classList.add('noDisplayName');
-                outgoingTable.innerHTML += '<tr><td>'+(request.displayName || request.accountId)+'</td><td>' +
-                    '<img src="../../assets/img/emojis/x.png" onclick="delFriend(\''+acc.accountId+'\', \''+request.accountId+'\')" style="cursor: pointer" width="'+width+'%" alt="cancel"> ' +
-                    '<img src="../../assets/img/emojis/no_entry_sign.png" onclick="createOverlay(\'Are you sure you want to block this user?<br>'+(request.displayName || request.accountId)+'\', blockUser, \''+acc.accountId+'\', \''+request.accountId+'\')" style="cursor: pointer" width="'+width+'%" alt="block"></td></tr>'
+                outgoingTable.innerHTML += '<tr><td class="friend">'+(request.displayName || request.accountId)+'</td><td>' +
+                    '<img src="../../assets/img/emojis/x.png" onclick="delFriend(\''+acc.accountId+'\', \''+request.accountId+'\')" style="cursor: pointer" width="16pt" alt="cancel"> ' +
+                    '<img src="../../assets/img/emojis/no_entry_sign.png" onclick="createOverlay(\'Are you sure you want to block this user?<br>'+(request.displayName || request.accountId)+'\', blockUser, \''+acc.accountId+'\', \''+request.accountId+'\')" style="cursor: pointer" width="16pt" alt="block"></td></tr>'
             }
 
             document.getElementById('output').appendChild(outgoingTable);
@@ -100,15 +97,14 @@ function friends() {
         outputText('<h2 id="outputTableTitle">Friends ('+friends.friends.length+')</h2>');
         let table = document.createElement('table');
         table.id = 'outputTable';
-        let width = 5;
-        if (friends.friends.filter(f => !f.displayName).length) width = 10;
         for (const friend of friends.friends.sort((a, b) => (a.displayName || a.accountId).toLowerCase().localeCompare((b.displayName || b.accountId).toLowerCase()))){
             if (!friend.displayName) table.classList.add('noDisplayName');
-            let row = '<tr><td>'+(friend.displayName || friend.accountId)+'</td><td>' +
-                '<img src="../../assets/img/emojis/no_entry.png" onclick="createOverlay(\'Are you sure you want to remove this friend?<br>'+(friend.displayName || friend.accountId)+'\', delFriend, \''+acc.accountId+'\', \''+friend.accountId+'\')" style="cursor: pointer" width="'+width+'%" alt="remove"> ' +
-                '<img src="../../assets/img/emojis/no_entry_sign.png" onclick="createOverlay(\'Are you sure you want to block this user?<br>'+(friend.displayName || friend.accountId)+'\', blockUser, \''+acc.accountId+'\', \''+friend.accountId+'\')" style="cursor: pointer" width="'+width+'%" alt="block"></td>';
+            let row = '<tr><td class="friend">'+(friend.displayName || friend.accountId)+'</td><td>' +
+                '<img src="../../assets/img/emojis/no_entry.png" onclick="createOverlay(\'Are you sure you want to remove this friend?<br>'+(friend.displayName || friend.accountId)+'\', delFriend, \''+acc.accountId+'\', \''+friend.accountId+'\')" style="cursor: pointer" width="16pt" alt="remove"> ' +
+                '<img src="../../assets/img/emojis/no_entry_sign.png" onclick="createOverlay(\'Are you sure you want to block this user?<br>'+(friend.displayName || friend.accountId)+'\', blockUser, \''+acc.accountId+'\', \''+friend.accountId+'\')" style="cursor: pointer" width="16pt" alt="block"></td>';
             table.innerHTML += row;
         }
+        if (table.classList.contains('noDisplayName')) hasHeadless = true;
         document.getElementById('output').appendChild(table);
     });
 }
@@ -223,6 +219,24 @@ async function sendRequest(){
         addFriend(myAcc.accountId, acc.id).then();
     });
 }
+
+document.addEventListener('keyup', () => {
+    let input = document.getElementById('search').value;
+    let nodeList = document.getElementsByClassName('friend');
+    let setHeadless = false;
+    for (let i = 0; i <= nodeList.length; i++){
+        let td = nodeList.item(i);
+        if (td && !td.innerHTML.toLowerCase().includes(input.toLowerCase())) td.parentElement.style.display = 'none';
+        else if (td){
+            if (!setHeadless) td.parentElement.parentElement.parentElement.classList.remove('noDisplayName');
+            td.parentElement.style.display = 'table-row';
+            if (td.innerHTML.length === 32 && hasHeadless && !setHeadless) {
+                td.parentElement.parentElement.parentElement.classList.add('noDisplayName');
+                setHeadless = true;
+            }
+        }
+    }
+});
 
 window.friends = friends;
 window.addFriend = addFriend;

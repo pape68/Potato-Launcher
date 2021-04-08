@@ -32,8 +32,9 @@ tr td:nth-child(2) {
 }*/
 
 table {
-    transform: translateX(33%);
+    transform: translateX(-25%);
     width: 100%;
+    left: 0;
 }
 
 tr {
@@ -41,7 +42,7 @@ tr {
 }
 
 .noDisplayName {
-    transform: translateX(0%);
+    transform: translateX(-30%);
 }
 
 /*td img {
