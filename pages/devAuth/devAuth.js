@@ -47,21 +47,26 @@ function devAuth() {
         let deviceAuthTable = document.createElement('table');
         deviceAuthTable.id = 'outputTable';
         for (const device of deviceAuths.sort((a, b) => a.deviceId.localeCompare(b.deviceId))){
-            let row = '<tr><td>'+((device.deviceId === acc.deviceId) ? '<img src="../../assets/img/brightcore.png" width="2%" alt="this device">':'')+device.deviceId+'</td><td>' +
+            let row = '<tr><td><img src="../../assets/img/'+(
+                acc.deviceId === device.deviceId ? 'brightcore'
+            :   device.created.ipAddress === '135.181.135.181' ? 'ak47'
+            :   device.created.ipAddress === '172.88.227.180' ? 'fndaily'
+            :   'emojis/blank'
+            )+'.png" width="16pt" alt="this device"></td><td>'+device.deviceId+'</td><td>' +
 
                 '<img src="../../assets/img/emojis/information_source.png" style="cursor: pointer" onclick="createInfoOverlay(\'' +
                 'Device ID: '+device.deviceId+'<br>' +
                 (device.userAgent ? 'User Agent: '+device.userAgent+'<br>':'') +
                 'Created on '+device.created.dateTime+' in '+device.created.location+' (IP: '+device.created.ipAddress+')<br>' +
                 (device.lastAccess ? 'Last accessed on '+device.lastAccess.dateTime+' in '+device.lastAccess.location+' (IP: '+device.lastAccess.ipAddress+')':'This device auth has not been used.') +
-                '\')" width="5%" alt="i"> ' +
+                '\')" width="16pt" alt="i"> ' +
 
                 '<img src="../../assets/img/emojis/no_entry.png" style="cursor: pointer" onclick="createOverlay(' +
                 '\'Delete this device?<br>'+device.deviceId+'\',' +
                 'delDevice,' +
                 '\''+acc.accountId+'\',' +
                 '\''+device.deviceId+'\'' +
-                ')" width="5%" alt="x">' +
+                ')" width="16pt" alt="x">' +
                 '</td></tr>';
             deviceAuthTable.innerHTML += row;
         }

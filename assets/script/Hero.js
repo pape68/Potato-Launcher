@@ -3,11 +3,12 @@ const templateIds = JSON.parse(fs.readFileSync(__dirname+'/../../assets/json/tem
 
 const mythics = ['Azalea Clark', 'Black Knight Garridan', 'Bladestorm Enforcer', 'Blakebeard the Blackhearted',
     'Carbide', 'Dennis Jr.', 'Dire', 'Field Agent Rio', 'Lynx Kassandra', 'Master Grenadier Ramirez',
-    'MEGA B.A.S.E Kyle', 'Phase Scout Jess', 'Calamity', 'Ragnarok', 'Raven', 'Steel Wool Anthony', 'Steel Wool Carlos',
+    'MEGA B.A.S.E. Kyle', 'Phase Scout Jess', 'Calamity', 'Ragnarok', 'Raven', 'Steel Wool Anthony', 'Steel Wool Carlos',
     'Steel Wool Syd', 'Subzero Zenith', 'Swordmaster Ken', 'The Cloaked Star', 'Wukong'];
 
 export class Hero {
     constructor(id, hero){
+        if (!hero?.templateId?.startsWith('Hero:')) return 'This is not a hero!';
         this.templateId = hero.templateId;
         this.name = templateIds[hero.templateId] || hero.templateId;
         this.rarity =
