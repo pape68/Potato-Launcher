@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Potato Launcher - STW Heroes Lookup</title>
+
+        <script src="stwHeroes.js" type="module"></script>
+        <script src="../../assets/script/sidebar.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../../assets/style/bgImage.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/style/input.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/style/scrollbar.css">
+        <link rel="stylesheet" type="text/css" href="stwHeroes.css">
+
+        <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <img src="../../assets/img/brightcore.png" id="background" alt="bg">
+        <form onsubmit="return false">
+            <label><select id="search">
+                <option value="">Search</option>
+            </select></label>
+            <label><input type="text" placeholder="Display Name" id="input"></label>
+            <button id="lookup" onclick="lookupAcc()">Lookup</button>
+        </form>
+        <p id="output"></p>
+    </body>
+</html>

@@ -12,6 +12,10 @@ function createOverlay(content, onConfirm, ...onConfirmArgs){
         if (document.getElementById('giftTo')) window.giftTo = document.getElementById('giftTo').value;
         if (document.getElementById('message')) window.message = document.getElementById('message').value;
 
+        //for manage heroes
+        if (document.getElementById('tier')) window.tier = document.getElementById('tier').value;
+        if (document.getElementById('level')) window.level = document.getElementById('level').value;
+
         onConfirm(...onConfirmArgs);
         document.getElementById('overlay').remove();
     };

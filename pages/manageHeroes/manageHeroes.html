@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Potato Launcher - STW Heroes Lookup</title>
+
+        <script src="manageHeroes.js" type="module"></script>
+        <script src="../../assets/script/overlay.js"></script>
+        <script src="../../assets/script/sidebar.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../../assets/style/bgImage.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/style/input.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/style/scrollbar.css">
+        <link rel="stylesheet" type="text/css" href="manageHeroes.css">
+
+        <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <img src="../../assets/img/brightcore.png" id="background" alt="bg">
+            <label><select id="accounts"></select></label>
+            <button id="lookup" onclick="heroes()">Load Heroes</button>
+        <p id="output"></p>
+    </body>
+</html>

@@ -9,6 +9,10 @@ button, input, select {
     transition: 0.4s;
 }
 
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 button:hover {
     background-color: #606060;
     cursor: pointer;

@@ -51,5 +51,6 @@ export const api = {
     )) },
     PurchaseResearchStatUpgrade: (accountId, stat) => { return composeMcp(accountId, 'PurchaseResearchStatUpgrade', 'campaign', '{"statId":"'+stat+'"}') },
     QueryProfile: (accountId, profile) => { return composeMcp(accountId, 'QueryProfile', profile) },
+    RecycleItem: (accountId, itemId) => { return composeMcp(accountId, 'RecycleItem', 'campaign', '{"targetItemId":"'+itemId+'"}') },
     SetHomebaseName: (accountId, homebaseName) => { return composeMcp(accountId, 'SetHomebaseName', 'common_public', '{"homebaseName":"'+homebaseName+'"}') }
 }
