@@ -18,6 +18,19 @@ export class Hero {
         :   (this.templateId.includes('r'))  ? 'rare'
         :   (this.templateId.includes('uc')) ? 'uncommon'
         :   'common';
+        this.backendRarity = {
+            'mythic': 'sr',
+            'legendary': 'sr',
+            'epic': 'vr',
+            'rare': 'r',
+            'uncommon': 'uc',
+            'common': 'c'
+        }[this.rarity];
+        this.nextRarity =
+            (this.templateId.includes('vr')) ? 'legendary'
+        :   (this.templateId.includes('r'))  ? 'epic'
+        :   (this.templateId.includes('uc')) ? 'rare'
+        :   'uncommon';
         this.level = hero.attributes.level;
         this.tier = this.templateId.substr(-1);
         this.id = id;

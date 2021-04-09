@@ -55,6 +55,8 @@ async function heroes(){
             tr.innerHTML = '' +
                 '<td><img src="'+hero.imageURL+'" alt="hero" width="32pt"></td>' +
                 '<td>'+hero.name+'</td><td>'+('<img src="../../assets/img/emojis/star.png" width="16pt" alt="star" class="star"> '.repeat(hero.tier))+' '+hero.level+'</td>' +
+                '<td><img width="32pt" '+(hero.backendRarity === 'sr' ? 'src="../../assets/img/emojis/blank.png"'
+                    :'style="cursor: pointer" src="../../assets/img/resources/'+hero.nextRarity+'flux.png" onclick="createOverlay(\'Are you sure you want to flux this hero?\', flux, \''+input+'\', \''+hero.id+'\')"')+'></td>' +
                 '<td><button onclick="createOverlay(' +
                 '\'Upgrade Options<br>' +
                 'Tier: <input id=&quot;tier&quot; type=&quot;number&quot; placeholder=&quot;Tier&quot; min=&quot;'+hero.tier+'&quot; max=&quot;5&quot;><br>' +
@@ -66,6 +68,17 @@ async function heroes(){
 
         document.getElementById('output').appendChild(table);
     });
+}
+
+async function flux(accountId, itemId){
+    clearOutput();
+    outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="16pt">');
+    let fluxHero = await api.UpgradeItemRarity(accountId, itemId);
+    if (fluxHero.errorMessage){
+        clearOutput();
+        return outputText(fluxHero.errorMessage);
+    }
+    await heroes();
 }
 
 async function recycle(accountId, itemId, hero){
@@ -121,9 +134,10 @@ async function upgrade(accountId, itemId, hero){
         }
     }
 
-    heroes().then();
+    await heroes();
 }
 
+window.flux = flux;
 window.heroes = heroes;
 window.recycle = recycle;
 window.upgrade = upgrade;

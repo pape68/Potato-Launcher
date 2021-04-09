@@ -6,6 +6,7 @@ function composeMcp(accountId, endpoint, profile, payload){
     if (!payload) payload = '{}';
     return new Promise(async resolve => {
         let token = await new VerifiedTokenPromise(accountId);
+        if (token.length !== 32) return resolve(JSON.stringify({ errorMessage: token }));
         let composition = await axios.post('https://fortnite-public-service-prod11.ol.epicgames.com/fortnite/api/game/v2/profile/'+accountId+'/client/'+endpoint+'?profileId='+profile,
             payload,
             {
@@ -62,5 +63,6 @@ export const api = {
     UpgradeItemBulk: (accountId, itemId, level, tier, conversion = 0) => {
         return composeMcp(accountId, 'UpgradeItemBulk', 'campaign',
             '{"targetItemId":"'+itemId+'","desiredLevel":"'+level+'","desiredTier":"'+tier+'","conversionRecipeIndexChoice":"'+conversion+'"}');
-    }
+    },
+    UpgradeItemRarity: (accountId, itemId) => { return composeMcp(accountId, 'UpgradeItemRarity', 'campaign', '{"targetItemId":"'+itemId+'"}') }
 }
