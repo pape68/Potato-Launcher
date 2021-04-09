@@ -1,7 +1,8 @@
 const fs = require('fs');
 
+document.head.innerHTML += '<style id="overlayStyle">' + fs.readFileSync(__dirname+'/../../assets/style/overlay.css').toString() + '</style>';
+
 function createOverlay(content, onConfirm, ...onConfirmArgs){
-    if (!document.getElementById('overlayStyle')) document.head.innerHTML += '<style id="overlayStyle">' + fs.readFileSync(__dirname+'/../../assets/style/overlay.css').toString() + '</style>';
     document.body.innerHTML += '<div id="overlay">'+content
         +'<img id="overlayConfirm" style="cursor: pointer" src="../../assets/img/emojis/white_check_mark.png" alt="confirm">'
         +'<img id="overlayDeny" style="cursor: pointer" src="../../assets/img/emojis/x.png" onclick="document.getElementById(\'overlay\').remove()" alt="deny">'
@@ -22,7 +23,6 @@ function createOverlay(content, onConfirm, ...onConfirmArgs){
 }
 
 function createInfoOverlay(content){
-    if (!document.getElementById('overlayStyle')) document.head.innerHTML += '<style id="overlayStyle">' + fs.readFileSync(__dirname+'/../../assets/style/overlay.css').toString() + '</style>';
     document.body.innerHTML += '<div id="overlay">'+content
         +'<img id="overlayClose" style="cursor: pointer" src="../../assets/img/emojis/x.png" onclick="document.getElementById(\'overlay\').remove()" alt="deny">'
         +'</div>';

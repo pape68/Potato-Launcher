@@ -57,9 +57,9 @@ async function heroes(){
                 '<td>'+hero.name+'</td><td>'+('<img src="../../assets/img/emojis/star.png" width="16pt" alt="star" class="star"> '.repeat(hero.tier))+' '+hero.level+'</td>' +
                 '<td><button onclick="createOverlay(' +
                 '\'Upgrade Options<br>' +
-                'Tier: <input type=&quot;number&quot; placeholder=&quot;Tier&quot; min=&quot;'+hero.tier+'&quot; max=&quot;5&quot;><br>' +
-                'Level: <input type=&quot;number&quot; placeholder=&quot;Level&quot; min=&quot;'+hero.level+'&quot; max=&quot;60&quot;>' +
-                '\', upgrade, \''+input+'\', \''+hero.id+'\', \''+hero+'\')" '+(hero.level === 60 ? 'style="display:none"':'')+'>Upgrade</button></td>' +
+                'Tier: <input id=&quot;tier&quot; type=&quot;number&quot; placeholder=&quot;Tier&quot; min=&quot;'+hero.tier+'&quot; max=&quot;5&quot;><br>' +
+                'Level: <input id=&quot;level&quot; type=&quot;number&quot; placeholder=&quot;Level&quot; min=&quot;'+hero.level+'&quot; max=&quot;60&quot;>' +
+                '\', upgrade, \''+input+'\', \''+hero.id+'\', \''+JSON.stringify(hero).replace(/"/g, '&quot;')+'\')" '+(hero.level === 60 ? 'style="display:none"':'')+'>Upgrade</button></td>' +
                 '<td><button onclick="createOverlay(\'Are you sure you want to recycle this hero?\', recycle, \''+input+'\', \''+hero.id+'\', \''+hero+'\')" '+(hero.favorite ? 'style="display:none"':'')+'>Recycle</button></td>';
             table.appendChild(tr);
         }
@@ -86,10 +86,40 @@ async function recycle(accountId, itemId, hero){
 async function upgrade(accountId, itemId, hero){
     clearOutput();
     outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="16pt">');
+    hero = JSON.parse(hero.replace(/&quot;/g, '"'));
     let tier = window.tier > 5 ? 5:window.tier;
     let level = window.level > 60 ? 60:window.level;
 
+    if (tier < hero.tier){
+        clearOutput();
+        return outputText('Desired tier is lower than hero tier.');
+    }
+    if (level < hero.level){
+        clearOutput();
+        return outputText('Desired level is lower than hero level.');
+    }
 
+    let levelUp = await api.UpgradeItemBulk(accountId, hero.id, (level > 50 ? 50:level), ['i', 'ii', 'iii', 'iv', 'v'][tier-1]);
+    if (levelUp.errorMessage){
+        clearOutput();
+        return outputText(levelUp.errorMessage);
+    }
+
+    if (level > 50){
+        hero.id = Object.keys(levelUp.profileChanges[0].profile.items).filter(key => {
+            let item = new Hero(key, levelUp.profileChanges[0].profile.items[key]);
+            console.log(item.level, level, item.tier, tier, item.templateId, hero.templateId.replace(/_t0[1-5]/, '_t0'+tier));
+            return [50, 52, 54, 56, 58, 60].includes(item.level) && item.tier === tier && item.templateId === hero.templateId.replace(/_t0[1-5]/, '_t0'+tier);
+        })[0];
+        for (let i = 50; i < level; i += 2-(level % 2)){
+            console.log(i, level);
+            let promotion = await api.PromoteItem(accountId, hero.id);
+            if (promotion.errorMessage){
+                clearOutput();
+                return outputText(promotion.errorMessage);
+            }
+        }
+    }
 
     heroes().then();
 }

@@ -26,17 +26,15 @@ function outputText(text) {
 
 function parseEntry(entry, gudShop) {
     let gudShopEntry = gudShop[gudShop.findIndex(e => e.offerId === entry.offerId)];
+    console.log(entry);
     return {
-        name: gudShopEntry.displayName,
+        name: gudShopEntry?.displayName || entry.devName,
         devName: entry.devName,
-        imageUrl: gudShopEntry.displayAssets[0].url,
+        imageUrl: gudShopEntry?.displayAssets[0].url,
         offerId: entry.offerId,
-        price: parseInt(entry.devName
-            .split('for ')[1]
-            .split('Mtx')[0]
-        ),
-        rarity: gudShopEntry.series ? gudShopEntry.series.id.toLowerCase() : gudShopEntry.rarity.id.toLowerCase(),
-        realRarity: gudShopEntry.rarity.id.toLowerCase(),
+        price: entry.prices[0]?.finalPrice || -1,
+        rarity: gudShopEntry?.series ? gudShopEntry?.series.id.toLowerCase() : gudShopEntry?.rarity.id.toLowerCase() || 'common',
+        realRarity: gudShopEntry?.rarity.id.toLowerCase() || 'common',
         type: entry.requirements[0]?.requiredId.split(':')[0]
     }
 }
@@ -67,7 +65,7 @@ async function brShop() {
             }
         );
 
-        let storefronts = shop.storefronts.filter(storefront => ['BRSpecialFeatured', 'BRWeeklyStorefront', 'BRDailyStorefront'].includes(storefront.name));
+        let storefronts = shop.storefronts.filter(storefront => ['BRSpecialFeatured', 'BRWeeklyStorefront', 'BRDailyStorefront', 'BRStarterKits'].includes(storefront.name));
         let table = document.createElement('table');
         table.id = 'outputTable';
         clearOutput();

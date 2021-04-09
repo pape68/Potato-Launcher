@@ -28,18 +28,24 @@ export const api = {
         });
     },
     ClaimLoginReward: (accountId) => { return composeMcp(accountId, 'ClaimLoginReward', 'campaign') },
-    GiftCatalogEntry: (accountId, offerId, expectedTotalPrice, receiverAccountId, personalMessage) => { return composeMcp(accountId, 'GiftCatalogEntry', 'common_core', JSON.stringify(
-        {
-            offerId: offerId,
-            purchaseQuantity: 1,
-            currencySubType: 'MtxCurrency',
-            expectedTotalPrice: expectedTotalPrice,
-            gameContext: '',
-            receiverAccountIds: [receiverAccountId],
-            giftWrapTemplateId: '',
-            personalMessage: personalMessage
-        }
-    )) },
+    ConvertItem: (accountId, itemId, conversion = 0) => {
+        return composeMcp(accountId, 'ConvertItem', 'campaign', '{"targetItemId":"'+itemId+'","conversionIndex":"'+conversion+'"}');
+    },
+    GiftCatalogEntry: (accountId, offerId, expectedTotalPrice, receiverAccountId, personalMessage) => {
+        return composeMcp(accountId, 'GiftCatalogEntry', 'common_core', JSON.stringify(
+            {
+                offerId: offerId,
+                purchaseQuantity: 1,
+                currencySubType: 'MtxCurrency',
+                expectedTotalPrice: expectedTotalPrice,
+                gameContext: '',
+                receiverAccountIds: [receiverAccountId],
+                giftWrapTemplateId: '',
+                personalMessage: personalMessage
+            }
+        ))
+    },
+    PromoteItem: (accountid, itemId) => { return composeMcp(accountid, 'PromoteItem', 'campaign', '{"targetItemId":"'+itemId+'"}') },
     PurchaseCatalogEntry: (accountId, offerId, expectedTotalPrice) => { return composeMcp(accountId, 'PurchaseCatalogEntry', 'common_core', JSON.stringify(
         {
             offerId: offerId,
@@ -52,5 +58,9 @@ export const api = {
     PurchaseResearchStatUpgrade: (accountId, stat) => { return composeMcp(accountId, 'PurchaseResearchStatUpgrade', 'campaign', '{"statId":"'+stat+'"}') },
     QueryProfile: (accountId, profile) => { return composeMcp(accountId, 'QueryProfile', profile) },
     RecycleItem: (accountId, itemId) => { return composeMcp(accountId, 'RecycleItem', 'campaign', '{"targetItemId":"'+itemId+'"}') },
-    SetHomebaseName: (accountId, homebaseName) => { return composeMcp(accountId, 'SetHomebaseName', 'common_public', '{"homebaseName":"'+homebaseName+'"}') }
+    SetHomebaseName: (accountId, homebaseName) => { return composeMcp(accountId, 'SetHomebaseName', 'common_public', '{"homebaseName":"'+homebaseName+'"}') },
+    UpgradeItemBulk: (accountId, itemId, level, tier, conversion = 0) => {
+        return composeMcp(accountId, 'UpgradeItemBulk', 'campaign',
+            '{"targetItemId":"'+itemId+'","desiredLevel":"'+level+'","desiredTier":"'+tier+'","conversionRecipeIndexChoice":"'+conversion+'"}');
+    }
 }

@@ -23,17 +23,27 @@
 }
 
 #overlayClose {
+    opacity: .4;
     right: 10px;
-    width: 5%;
     top: 10px;
+    transition: .4s;
+    width: 5%;
 }
 
 #overlayConfirm {
     left: 20%;
+    opacity: .4;
+    transition: .4s;
     width: 15%;
 }
 
 #overlayDeny {
+    opacity: .4;
     right: 20%;
+    transition: .4s;
     width: 15%;
+}
+
+#overlayClose:hover, #overlayConfirm:hover, #overlayDeny:hover {
+    opacity: 1;
 }
