@@ -36,6 +36,9 @@ table {
     width: 100%;
     left: 0;
 }
+#incomingTable {
+    transform: translateX(-10%);
+}
 
 tr {
     width: 100%;
@@ -43,6 +46,9 @@ tr {
 
 .noDisplayName {
     transform: translateX(-30%);
+}
+#incomingTable .noDisplayName {
+    transform: translateX(-55%);
 }
 
 /*td img {

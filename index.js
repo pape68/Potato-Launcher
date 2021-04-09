@@ -2,8 +2,9 @@ const electron = require('electron');
 
 const { app, BrowserWindow, Menu } = electron;
 
+let window;
 app.on('ready', () => {
-    let window = new BrowserWindow({
+    window = new BrowserWindow({
         icon: './assets/img/brightcore.png',
         webPreferences: {
             contextIsolation: false,
@@ -23,6 +24,8 @@ function addAccountWindow(){
     let addWindow = new BrowserWindow({
         width: 300,
         height: 200,
+        modal: true,
+        parent: window,
         title: 'Add Account',
         icon: './assets/img/brightcore.png',
         webPreferences: {
@@ -39,6 +42,8 @@ function convertAccountsWindow(){
     let convertWindow = new BrowserWindow({
         width: 300,
         height: 200,
+        modal: true,
+        parent: window,
         title: 'Convert Accounts',
         icon: './assets/img/brightcore.png',
         webPreferences: {
@@ -55,6 +60,8 @@ function removeAccWindow(){
     let rmWindow = new BrowserWindow({
         width: 300,
         height: 200,
+        modal: true,
+        parent: window,
         title: 'Remove Account',
         icon: './assets/img/brightcore.png',
         webPreferences: {
@@ -72,6 +79,8 @@ function setPathWindow(){
     let pathWindow = new BrowserWindow({
         width: 350,
         height: 233,
+        modal: true,
+        parent: window,
         title: 'Set Path',
         icon: './assets/img/brightcore.png',
         webPreferences: {
@@ -88,6 +97,8 @@ function creditsWindow(){
     let credWindow = new BrowserWindow({
         width: 350,
         height: 350,
+        modal: true,
+        parent: window,
         title: 'Potato Launcher Credits',
         icon: './assets/img/brightcore.png',
         webPreferences: {
@@ -104,6 +115,8 @@ function devLoginWindow(){
     let loginWindow = new BrowserWindow({
         width: 350,
         height: 350,
+        modal: true,
+        parent: window,
         title: 'Device Auth Login',
         icon: './assets/img/brightcore.png',
         webPreferences: {
@@ -120,6 +133,8 @@ function xchLoginWindow(){
     let loginWindow = new BrowserWindow({
         width: 350,
         height: 233,
+        modal: true,
+        parent: window,
         title: 'Exchange Code Login',
         icon: './assets/img/brightcore.png',
         webPreferences: {

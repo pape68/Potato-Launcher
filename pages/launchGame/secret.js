@@ -45,6 +45,8 @@ function activateCheats() {
     let cheats = new BrowserWindow({
         width: 500,
         height: 400,
+        modal: true,
+        parent: electron.remote.getCurrentWindow(),
         title: 'Add Account',
         icon: './assets/img/brightcore.png',
         webPreferences: {
