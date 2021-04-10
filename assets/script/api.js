@@ -37,7 +37,8 @@ export const api = {
             {
                 offerId: offerId,
                 purchaseQuantity: 1,
-                currencySubType: 'MtxCurrency',
+                currency: 'MtxCurrency',
+                currencySubType: '',
                 expectedTotalPrice: expectedTotalPrice,
                 gameContext: '',
                 receiverAccountIds: [receiverAccountId],

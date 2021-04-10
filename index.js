@@ -52,6 +52,7 @@ function convertAccountsWindow(){
             nodeIntegration: true
         }
     });
+    //convertWindow.webContents.openDevTools();
     convertWindow.loadURL('file://'+__dirname+'/menu/account/convertOld.html').then();
     convertWindow.removeMenu();
 }
