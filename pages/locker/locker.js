@@ -80,6 +80,8 @@ async function locker(){
                 if (a.realRarity === item) rarityA = rarityOrder.indexOf(item);
                 if (b.realRarity === item) rarityB = rarityOrder.indexOf(item);
             }
+            if (a.rarity.toLowerCase() !== a.realRarity) rarityA -= 0.5;
+            if (b.rarity.toLowerCase() !== b.realRarity) rarityB -= 0.5;
 
             //Sort
             if (sortA !== sortB) return sortA-sortB; //by item type
