@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Potato Launcher - Invite Player</title>
+        <title>Potato Launcher - Locker</title>
 
-        <script src="invite.js" type="module"></script>
-        <script src="../../assets/script/overlay.js" defer></script>
+        <script src="locker.js" type="module"></script>
         <script src="../../assets/script/sidebar.js"></script>
 
         <link rel="stylesheet" type="text/css" href="../../assets/style/bgImage.css">
         <link rel="stylesheet" type="text/css" href="../../assets/style/input.css">
         <link rel="stylesheet" type="text/css" href="../../assets/style/scrollbar.css">
-        <link rel="stylesheet" type="text/css" href="invite.css">
+        <link rel="stylesheet" type="text/css" href="locker.css">
 
         <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <img src="../../assets/img/brightcore.png" id="background" alt="bg">
-        <label for="accounts"></label><select id="accounts"></select>
-        <button onclick="loadFriends()">Load Friends List</button>
-        <br>
-        <label><input type="text" placeholder="Search" id="search"></label>
+        <form onsubmit="return false">
+            <label><select id="search"></select></label>
+            <button id="lookup" onclick="locker()">Load Locker</button>
+        </form>
         <p id="output"></p>
     </body>
 </html>
