@@ -34,7 +34,8 @@ function addAccountWindow(){
             nodeIntegration: true
         }
     });
-    addWindow.loadURL('file://'+__dirname+'/menu/account/addAccount.html').then();
+    //addWindow.loadURL('file://'+__dirname+'/menu/account/addAccount.html').then();
+    addWindow.loadURL('file://'+__dirname+'/menu/account/authLogin.html').then(); //Use when device code doesn't work
     addWindow.removeMenu();
 }
 

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Authorization Code Login</title>
+
+        <script src="scripts/authLogin.js" type="module" defer></script>
+
+        <link rel="stylesheet" type="text/css" href="../../assets/style/bgImage.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/style/input.css">
+        <link rel="stylesheet" type="text/css" href="../../assets/style/index.css">
+
+        <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <img src="../../assets/img/brightcore.png" id="background" alt="bg">
+        <label>
+            <input type="text" placeholder="Authorization Code" id="input"><br>
+        </label>
+        <button id="lookup" onclick="authLogin()">Login</button>
+        <p id="output"></p>
+    </body>
+</html>
