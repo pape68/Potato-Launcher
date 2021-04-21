@@ -25,7 +25,7 @@ async function setHbName() {
     outputText('Loading <img src="../../assets/img/loading.gif" alt="loading" width="16pt">');
     let input = document.getElementById('accounts').value;
     let acc = accounts.filter(acc => acc.accountId === input)[0];
-    let hbName = document.getElementById('setHbName').value;
+    let hbName = document.getElementById('newHbName').value;
     let profile = await api.SetHomebaseName(acc.accountId, hbName);
     if (profile.errorMessage){
         clearOutput();
