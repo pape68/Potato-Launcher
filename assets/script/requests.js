@@ -1,13 +1,13 @@
 function request(options){
     return new Promise(async resolve => {
         let request = new XMLHttpRequest();
-        request.open((options.method || 'GET'), options.url);
+        request.open((options.method?.toUpperCase() || 'GET'), options.url);
 
         for (const [header, value] of Object.entries(options.headers)){
             request.setRequestHeader(header, value.toString());
         }
 
-        request.send(options.body ? options.body:'{}');
+        request.send(options.body ?? '{}');
         request.onreadystatechange = () => {
             if (request.readyState !== 4) return;
             if (request.response) return resolve(JSON.parse(request.response));

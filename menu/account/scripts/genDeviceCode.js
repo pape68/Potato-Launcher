@@ -15,8 +15,8 @@ const output = document.getElementById('code');
         }
     );
 
-    let deviceCode = await axios.post('https://account-public-service-prod03.ol.epicgames.com/account/api/oauth/deviceAuthorization',
-        'prompt=login',
+    let deviceCode = await axios.post('https://api.epicgames.dev/epic/oauth/v1/deviceAuthorization',
+        'prompt=login&client_id=5229dcd3ac3845208b496649092f251b',
         {
             'Authorization': 'bearer '+deviceCodeToken.access_token,
             'Content-Type': 'application/x-www-form-urlencoded'

@@ -14,6 +14,7 @@ app.on('ready', () => {
     });
     //window.webContents.openDevTools();
     //window.webContents.setVisualZoomLevelLimits(1, 3).then(); //not working? idk
+    window.webContents.setUserAgent('Fortnite/++Fortnite+Release-16.10-CL-15898731');
     window.loadURL('file://'+__dirname+'/index.html').then();
 
     const mainMenu = Menu.buildFromTemplate(menu);
@@ -34,9 +35,28 @@ function addAccountWindow(){
             nodeIntegration: true
         }
     });
-    //addWindow.loadURL('file://'+__dirname+'/menu/account/addAccount.html').then();
-    addWindow.loadURL('file://'+__dirname+'/menu/account/authLogin.html').then(); //Use when device code doesn't work
+    //addWindow.webContents.openDevTools();
+    addWindow.loadURL('file://'+__dirname+'/menu/account/addAccount.html').then();
+    //addWindow.loadURL('file://'+__dirname+'/menu/account/authLogin.html').then(); //Use when device code doesn't work
     addWindow.removeMenu();
+}
+
+function authCodeWindow(){ //Comment this out if Device Code doesn't work
+    let authWindow = new BrowserWindow({
+        width: 300,
+        height: 200,
+        modal: true,
+        parent: window,
+        title: 'Add Account',
+        icon: './assets/img/brightcore.png',
+        webPreferences: {
+            contextIsolation: false,
+            enableRemoteModule: true,
+            nodeIntegration: true
+        }
+    });
+    authWindow.loadURL('file://'+__dirname+'/menu/account/authLogin.html').then();
+    authWindow.removeMenu();
 }
 
 function convertAccountsWindow(){
@@ -158,6 +178,12 @@ const menu = [
                 label: 'Add Account',
                 click(){
                     addAccountWindow();
+                }
+            },
+            {
+                label: 'Authorization Code Login',
+                click(){
+                    authCodeWindow();
                 }
             },
             {
