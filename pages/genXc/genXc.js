@@ -2,7 +2,6 @@ import {axios} from '../../assets/script/requests.js';
 import {VerifiedToken} from '../../assets/script/VerifiedToken.js';
 
 const fs = require('fs');
-const clipboardy = require("clipboardy");
 
 const accounts = JSON.parse(fs.readFileSync(process.env.appdata + '/a.bakedpotato/fnappv2/accounts.json').toString());
 
@@ -45,7 +44,7 @@ function genXc() {
 
         clearOutput();
         outputText(`Exchange code: ${xch.code}`);
-        clipboardy.writeSync(xch.code);
+        await navigator.clipboard.writeText(xch.code);
     });
 }
 
