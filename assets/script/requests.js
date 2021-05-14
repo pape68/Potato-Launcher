@@ -1,8 +1,15 @@
+const os = require('os');
+
 function request(options){
     return new Promise(async resolve => {
         let request = new XMLHttpRequest();
         request.open((options.method?.toUpperCase() || 'GET'), options.url);
 
+        options.headers['X-Epic-Device-Info'] = JSON.stringify({
+            type: 'Microsoft',
+            model: os.type().replace(/_/g, ' ')+' '+os.release().split('.')[0],
+            os: os.release()
+        });
         for (const [header, value] of Object.entries(options.headers)){
             request.setRequestHeader(header, value.toString());
         }

@@ -1,6 +1,6 @@
 {
   "name": "potato-launcher",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "description": "Manage your Epic Games accounts via the API.",
   "main": "index.js",
   "scripts": {
@@ -10,9 +10,7 @@
   },
   "author": "a.bakedpotato, m4tonoob, Otavio",
   "license": "ISC",
-  "dependencies": {
-    "clipboardy": "^2.3.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "electron-builder": "^22.10.5",
     "electron": "^12.0.2"

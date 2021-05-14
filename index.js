@@ -14,7 +14,7 @@ app.on('ready', () => {
     });
     //window.webContents.openDevTools();
     //window.webContents.setVisualZoomLevelLimits(1, 3).then(); //not working? idk
-    window.webContents.setUserAgent('Fortnite/++Fortnite+Release-16.10-CL-15898731');
+    window.webContents.setUserAgent('Fortnite/++Fortnite+Release-16.40-CL-16227914');
     window.loadURL('file://'+__dirname+'/index.html').then();
 
     const mainMenu = Menu.buildFromTemplate(menu);

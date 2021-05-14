@@ -1,6 +1,6 @@
 import { axios } from './requests.js';
 
-const thisTag = '2.2.3'.split('.').map(i => parseInt(i));
+const thisTag = '2.2.4'.split('.').map(i => parseInt(i));
 
 function output(text){
     document.getElementById('update').innerHTML = text;
