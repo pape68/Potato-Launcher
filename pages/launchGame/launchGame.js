@@ -1,4 +1,4 @@
-import { axios } from '../../assets/script/requests.js';
+import { axios, launcherBasic } from '../../assets/script/requests.js';
 import { VerifiedToken } from '../../assets/script/VerifiedToken.js';
 
 const child_process = require('child_process');
@@ -34,16 +34,37 @@ function launchGame(){
     new VerifiedToken(input, async token => {
         if (token.length !== 32){
             clearOutput();
-            return outputText('Error: '+token);
+            return outputText('Error (-1): '+token);
         }
-        let xch = await axios.get('https://account-public-service-prod.ol.epicgames.com/account/api/oauth/exchange',
+        let xchIos = await axios.get('https://account-public-service-prod.ol.epicgames.com/account/api/oauth/exchange',
             {
                 Authorization: 'bearer '+token
             }
         );
+        if (!xchIos.code) {
+            clearOutput();
+            return outputText('Error (0): '+xchIos.errorMessage);
+        }
+		
+		let newToken = await axios.post('https://account-public-service-prod.ol.epicgames.com/account/api/oauth/token',
+			'grant_type=exchange_code&exchange_code=' + xchIos.code,
+			{
+				'Authorization': 'basic '+launcherBasic,
+				'Content-Type': 'application/x-www-form-urlencoded'
+			}
+		);
+		if (!newToken.access_token){
+            clearOutput();
+            return outputText('Error (2): '+newToken.errorMessage);
+		}
+        let xch = await axios.get('https://account-public-service-prod.ol.epicgames.com/account/api/oauth/exchange',
+            {
+                Authorization: 'bearer '+newToken.access_token
+            }
+        );
         if (!xch.code) {
             clearOutput();
-            return outputText('Error: '+xch.errorMessage);
+            return outputText('Error (1): '+xch.errorMessage);
         }
 
         fs.readdirSync("C:/ProgramData/Epic/EpicGamesLauncher/Data/Manifests").filter(i => i.endsWith('item')).forEach(item => {
@@ -51,7 +72,7 @@ function launchGame(){
                 LaunchCommand = (JSON.parse(fs.readFileSync(`C:/ProgramData/Epic/EpicGamesLauncher/Data/Manifests/${item}`).toString()).LaunchCommand);
         });
 
-        child_process.exec(`start "" "FortniteLauncher.exe"${LaunchCommand} -AUTH_LOGIN=unused -AUTH_PASSWORD=${xch.code} -AUTH_TYPE=exchangecode -epicapp=Fortnite -epicenv=Prod -EpicPortal  -epicusername="${acc.displayName}" -epicuserid=${acc.accountId} -epiclocale=en`,
+        child_process.exec(`start "" "FortniteLauncher.exe"${LaunchCommand} -AUTH_LOGIN=unused -AUTH_PASSWORD=${xch.code} -AUTH_TYPE=exchangecode -epicapp=Fortnite -epicenv=Prod -EpicPortal -steamimportavailable -epicusername="${acc.displayName}" -epicuserid=${acc.accountId} -epiclocale=en -epicsandboxid=fn`,
             {
                 cwd: path
             }
